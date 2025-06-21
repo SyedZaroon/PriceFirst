@@ -1,0 +1,36 @@
+.checkbox-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+ .checkbox-wrapper input[type="checkbox"] {
+     display: none;
+ }
+
+ .checkmark {
+    background-color: var(--color-white);
+    border-radius: var(--radius-xs);
+   box-shadow: var(--shadow-checkbox);
+ }
+
+ .checkmark-sm{
+    width: 16px;
+    height: 16px;
+ }
+
+ .checkmark-md{
+    width: 20px;
+    height: 20px;
+ }
+
+ .checkmark-lg{
+    width: 24px;
+    height: 24px;
+ }
+
+ .checkmark:hover {
+    background-color: var(--gray-50);
+    box-shadow: var(--shadow-checkbox-hover);
+ }

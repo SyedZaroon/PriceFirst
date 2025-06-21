@@ -98,6 +98,18 @@
         0px 0px 0px 1px #000000A3,
         0px 2px 5px 0px #676E7614;
 
+    --shadow-checkbox:
+        0px 1px 1px 0px #0000001F,
+        0px 0px 0px 1px #676E7629,
+        0px 2px 5px 0px #676E7614;
+
+    --shadow-checkbox-hover:
+        0px 1px 1px 0px #0000001F,
+        0px 0px 0px 1px #000000A3,
+        0px 2px 5px 0px #676E7614;
+
+
+
 
     /* Spacing Scale (Padding / Margin)
     Container / Layout Widths */
