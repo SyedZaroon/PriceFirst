@@ -1,0 +1,96 @@
+.iconbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-black);
+    border-radius: var(--radius-xl);
+}
+
+.iconbox:hover{
+    background-color: var(--gray-900);
+    box-shadow: var(--shadow-hover-secondary);
+}
+
+.iconbox:focus {
+    background-color: var(--color-black);
+    box-shadow: var(--shadow-focus-secondary);
+}
+
+.iconbox:disabled {
+    cursor: not-allowed;
+    background-color: var(--gray-100);
+    box-shadow: var(--shadow-md);
+}
+.icon{
+    color: var(--color-white);
+}
+.iconbox:disabled .icon {
+    color: var(--gray-300);
+}
+
+.iconbox-2xs{
+    width: 32px;
+    height: 32px;
+}
+
+.iconbox-xs {
+    width: 40px;
+    height: 40px;
+}
+
+.iconbox-sm {
+    width: 48px;
+    height: 48px;
+}
+
+.iconbox-md {
+    width: 56px;
+    height: 56px;
+}
+.iconbox-lg {
+    width: 64px;
+    height: 64px;
+}
+.iconbox-xl {
+    width: 72px;
+    height: 72px;
+}
+.iconbox-2xl {
+    width: 80px;
+    height: 80px;
+}
+
+.icon-2xs {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-xs {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-sm {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-md {
+    width: 28px;
+    height: 28px;
+}
+
+.icon-lg {
+    width: 32px;
+    height: 32px;
+}
+
+.icon-xl {
+    width: 36px;
+    height: 36px;
+}
+
+.icon-2xl {
+    width: 40px;
+    height: 40px;
+}

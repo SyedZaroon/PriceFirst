@@ -1,36 +1,92 @@
 .checkbox-wrapper {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   cursor: pointer;
 }
 
- .checkbox-wrapper input[type="checkbox"] {
-     display: none;
- }
+.checkbox-wrapper input[type="checkbox"] {
+   display: none;
+}
 
- .checkmark {
-    background-color: var(--color-white);
-    border-radius: var(--radius-xs);
-   box-shadow: var(--shadow-checkbox);
- }
+.checkmark {
+   background-color: var(--color-white);
+   border-radius: var(--radius-xs);
+   box-shadow: var(--shadow-md);
+}
 
- .checkmark-sm{
-    width: 16px;
-    height: 16px;
- }
+.checkmark-sm {
+   width: 16px;
+   height: 16px;
+   font-size: 12px;
+}
 
- .checkmark-md{
-    width: 20px;
-    height: 20px;
- }
+.checkmark-md {
+   width: 20px;
+   height: 20px;
+}
 
- .checkmark-lg{
-    width: 24px;
-    height: 24px;
- }
+.checkmark-lg {
+   width: 24px;
+   height: 24px;
+}
 
- .checkmark:hover {
-    background-color: var(--gray-50);
-    box-shadow: var(--shadow-checkbox-hover);
- }
+.checkmark:hover {
+   background-color: var(--gray-50);
+   box-shadow: var(--shadow-hover-primary);
+}
+
+input[type="checkbox"]:checked+.checkmark {
+   background-color: var(--color-black);
+   box-shadow: none;
+   position: relative;
+}
+
+input[type="checkbox"]:checked+.checkmark:hover {
+   background-color: var(--color-black);
+   box-shadow: var(--shadow-focus-primary);
+   position: relative;
+}
+
+.check {
+   display: none;
+}
+
+.check-sm {
+   width: 7.5px;
+   height: 6.75px;
+}
+
+.check-md {
+   width: 10px;
+   height: 9px;
+}
+
+.check-lg {
+   width: 12.5px;
+   height: 11.5px;
+}
+
+input[type="checkbox"]:checked+.checkmark .check {
+   display: flex;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+
+input[type="checkbox"]:disabled+.checkmark {
+   background-color: var(--gray-200);
+   box-shadow: none;
+   position: relative;
+}
+
+.custom-check-icon {
+   display: flex;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+}

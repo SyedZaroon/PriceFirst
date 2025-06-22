@@ -44,7 +44,7 @@
 }
 
 .btn-primary:focus {
-    box-shadow: var(--shadow-button-focus)
+    box-shadow: var(--shadow-focus-secondary)
 }
 
 .btn-primary:disabled {
@@ -63,12 +63,12 @@
 
 .btn-secondary:hover {
     background-color: var(--gray-100);
-    box-shadow: var(--shadow-button-hover);
+    box-shadow: var(--shadow-hover-primary);
     border: 1px solid transparent;
 }
 
 .btn-secondary:focus {
-    box-shadow: var(--shadow-button-focus)
+    box-shadow: var(--shadow-focus-secondary)
 }
 
 .btn-secondary:disabled {
@@ -87,12 +87,12 @@
 
 .btn-secondary-gray:hover {
     background-color: var(--gray-200);
-    box-shadow: var(--shadow-button-hover);
+    box-shadow: var(--shadow-hover-primary);
 }
 
 .btn-secondary-gray:focus {
     background-color: var(--gray-50);
-    box-shadow: var(--shadow-button-focus);
+    box-shadow: var(--shadow-focus-secondary);
 }
 
 .btn-secondary-gray:disabled {
