@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./inputfields.module.css";
 
 const InputFields = ({
-  label = "Label",
+  label = "",
   errormessage = "Error message",
   type = "text",
   className = "",

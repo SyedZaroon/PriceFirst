@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './iconbutton.module.css' 
-import Plus from '../../icons/Plus'
 
 const Iconbutton = (
     {

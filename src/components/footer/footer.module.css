@@ -1,0 +1,16 @@
+.footer{
+    width: var(--small-box-width);
+    margin: 50px auto 0px;
+}
+
+.footer-box{
+    background-color: var(--gray-50);
+    border: 0.5px solid var(--gray-200);
+    border-radius: var(--radius-2xl);
+    padding: 0px 48px;
+}
+
+.footer-box-top{
+    padding: 55px 0px;
+    border-bottom: 1px solid var(--gray-200) ;
+}

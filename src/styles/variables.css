@@ -81,10 +81,13 @@
     --success-1000: #1E4D3A;
 
     --radius-xs: 4px;
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 16px;
-    --radius-xl: 100px;
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 16px;
+        --radius-xl: 20px;
+        --radius-xxl: 32px;
+        --radius-2xl: 40px;
+        --radius-full: 100px;
 
     --shadow-focus-secondary:
         0px 1px 1px 0px #0000001F,
@@ -112,6 +115,9 @@
         0px 1px 1px 0px #0000001F,
         0px 0px 0px 1px #676E763D,
         0px 2px 5px 0px #676E7614;
+
+    --box-width: clamp(398px,90vw ,1400px);
+    --small-box-width: clamp(398px, 80vw, 1240px)
 
 
 

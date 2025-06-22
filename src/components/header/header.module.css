@@ -1,0 +1,27 @@
+.header{
+    background-color: var(--color-black);
+    border-radius: var(--radius-2xl);
+   max-width: var(--box-width);
+    margin: 16px auto;
+    padding: 24px 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 56px;
+}
+
+.header-logo{
+    color: var(--accent-700);
+}
+
+.header-menu{
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+
+    color: var(--color-white);
+    font-family: var(--font-futuru);
+    font-weight: var(--fontw-semi-bold);
+    font-size: var(--fs-body-3);
+
+}
