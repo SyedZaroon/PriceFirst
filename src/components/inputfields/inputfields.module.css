@@ -12,7 +12,7 @@
 
 .input-field-box {
     background-color: var(--color-white);
-    border: 1px solid var(--gray-300);
+    border: 1px solid var(--color-gray-300);
     padding: 12px;
     border-radius: var(--radius-md);
     width: 100%;
@@ -41,16 +41,16 @@
 }
 
 .input-error {
-    border: 1px solid var(--error-600) !important;
+    border: 1px solid var(--color-error-600);
 }
 
 .input-success {
-    border: 1px solid var(--success-700) !important;
+    border: 1px solid var(--color-success-700);
 }
 
 .disabled {
-    background-color: var(--gray-100);
-    border: 1px solid var(--gray-200);
+    background-color: var(--color-gray-100);
+    border: 1px solid var(--color-gray-200);
     cursor: not-allowed;
 }
 

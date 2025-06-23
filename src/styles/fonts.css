@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+@font-face {
+    font-family: "Futuru";
+    src: url("/src/assets/fonts/Futuru/WOFF2/Futuru-Thin.woff2") format("woff2"),
+        url("/src/assets/fonts/Futuru/WOFF/Futuru-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Futuru";
+    src: url("/src/assets/fonts/Futuru/WOFF2/Futuru-Extralight.woff2") format("woff2"),
+        url("/src/assets/fonts/Futuru/WOFF/Futuru-Extralight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Futuru";
+    src: url("/src/assets/fonts/Futuru/WOFF2/Futuru-Light.woff2") format("woff2"),
+        url("/src/assets/fonts/Futuru/WOFF/Futuru-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Futuru";
+    src: url("/src/assets/fonts/Futuru/WOFF2/Futuru-Regular.woff2") format("woff2"),
+        url("/src/assets/fonts/Futuru/WOFF/Futuru-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Futuru";
+    src: url("/src/assets/fonts/Futuru/WOFF2/Futuru-Medium.woff2") format("woff2"),
+        url("/src/assets/fonts/Futuru/WOFF/Futuru-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Futuru";
+    src: url("/src/assets/fonts/Futuru/WOFF2/Futuru-Semibold.woff2") format("woff2"),
+        url("/src/assets/fonts/Futuru/WOFF/Futuru-Semibold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Futuru";
+    src: url("/src/assets/fonts/Futuru/WOFF2/Futuru-Bold.woff2") format("woff2"),
+        url("/src/assets/fonts/Futuru/WOFF/Futuru-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Futuru";
+    src: url("/src/assets/fonts/Futuru/WOFF2/Futuru-Extrabold.woff2") format("woff2"),
+        url("/src/assets/fonts/Futuru/WOFF/Futuru-Extrabold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Futuru";
+    src: url("/src/assets/fonts/Futuru/WOFF2/Futuru-Black.woff2") format("woff2"),
+        url("/src/assets/fonts/Futuru/WOFF/Futuru-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

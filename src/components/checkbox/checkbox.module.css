@@ -32,7 +32,7 @@
 }
 
 .checkmark:hover {
-   background-color: var(--gray-50);
+   background-color: var(--color-gray-50);
    box-shadow: var(--shadow-hover-primary);
 }
 
@@ -77,7 +77,7 @@ input[type="checkbox"]:checked+.checkmark .check {
 
 
 input[type="checkbox"]:disabled+.checkmark {
-   background-color: var(--gray-200);
+   background-color: var(--color-gray-200);
    box-shadow: none;
    position: relative;
 }

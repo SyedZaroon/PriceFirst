@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "./fonts.css";
 
 :root {
-    --font-futuru: 'Roboto', sans-serif;
+    --font-futuru: 'Futuru', sans-serif;
     --font-inter: 'Inter', sans-serif;
 
     --fontw-thin: 100;
@@ -37,51 +37,52 @@
 
     --color-white: #FFFFFF;
     --color-black: #000000;
-    --accent-100: #FFFCF3;
-    --accent-200: #FFFAEC;
-    --accent-300: #FFF5D8;
-    --accent-400: #FFE9A6;
-    --accent-500: #FFDE7A;
-    --accent-600: #FFCF3F;
-    --accent-700: #FFC107;
-    --accent-800: #EFB300;
-    --accent-900: #DBA400;
+    
+    --color-accent-100: #FFFCF3;
+    --color-accent-200: #FFFAEC;
+    --color-accent-300: #FFF5D8;
+    --color-accent-400: #FFE9A6;
+    --color-accent-500: #FFDE7A;
+    --color-accent-600: #FFCF3F;
+    --color-accent-700: #FFC107;
+    --color-accent-800: #EFB300;
+    --color-accent-900: #DBA400;
 
-    --gray-50: #FAFAFA;
-    --gray-100: #F6F7F9;
-    --gray-200: #E5E7EA;
-    --gray-300: #CED2D6;
-    --gray-400: #9EA5AD;
-    --gray-500: #676E76;
-    --gray-600: #596066;
-    --gray-700: #454C52;
-    --gray-800: #383F45;
-    --gray-900: #24292E;
-    --gray-1000: #1A1D1F;
+    --color-gray-50: #FAFAFA;
+    --color-gray-100: #F6F7F9;
+    --color-gray-200: #E5E7EA;
+    --color-gray-300: #CED2D6;
+    --color-gray-400: #9EA5AD;
+    --color-gray-500: #676E76;
+    --color-gray-600: #596066;
+    --color-gray-700: #454C52;
+    --color-gray-800: #383F45;
+    --color-gray-900: #24292E;
+    --color-gray-1000: #1A1D1F;
 
-    --error-50: #FAFAFA;
-    --error-100: #FEF2F2;
-    --error-200: #FDE9E9;
-    --error-300: #FAC7C7;
-    --error-400: #F7A1A1;
-    --error-500: #F37373;
-    --error-600: #F34141;
-    --error-700: #CD3636;
-    --error-800: #A32E2E;
-    --error-900: #7C2323;
-    --error-1000: #601B1B;
+    --color-error-50: #FAFAFA;
+    --color-error-100: #FEF2F2;
+    --color-error-200: #FDE9E9;
+    --color-error-300: #FAC7C7;
+    --color-error-400: #F7A1A1;
+    --color-error-500: #F37373;
+    --color-error-600: #F34141;
+    --color-error-700: #CD3636;
+    --color-error-800: #A32E2E;
+    --color-error-900: #7C2323;
+    --color-error-1000: #601B1B;
 
-    --success-50: #F6FEF9;
-    --success-100: #EFFDF6;
-    --success-200: #D9F9E6;
-    --success-300: #B8F1D2;
-    --success-400: #8EE4BA;
-    --success-500: #6AD09D;
-    --success-600: #53B483;
-    --success-700: #2F9461;
-    --success-800: #2F7657;
-    --success-900: #255E46;
-    --success-1000: #1E4D3A;
+    --color-success-50: #F6FEF9;
+    --color-success-100: #EFFDF6;
+    --color-success-200: #D9F9E6;
+    --color-success-300: #B8F1D2;
+    --color-success-400: #8EE4BA;
+    --color-success-500: #6AD09D;
+    --color-success-600: #53B483;
+    --color-success-700: #2F9461;
+    --color-success-800: #2F7657;
+    --color-success-900: #255E46;
+    --color-success-1000: #1E4D3A;
 
     --base-factor: 4px;
 

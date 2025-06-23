@@ -40,7 +40,7 @@
 }
 
 .btn-primary:hover {
-    background-color: var(--gray-1000);
+    background-color: var(--color-gray-1000);
 }
 
 .btn-primary:focus {
@@ -48,9 +48,9 @@
 }
 
 .btn-primary:disabled {
-    background-color: var(--gray-100);
-    border: 1px solid var(--gray-200);
-    color: var(--gray-300);
+    background-color: var(--color-gray-100);
+    border: 1px solid var(--color-gray-200);
+    color: var(--color-gray-300);
     cursor: not-allowed;
 }
 
@@ -58,11 +58,11 @@
     background-color: var(--color-white);
     color: var(--color-black);
     border-radius: var(--radius-xl);
-    border: 1px solid var(--gray-300);
+    border: 1px solid var(--color-gray-300);
 }
 
 .btn-secondary:hover {
-    background-color: var(--gray-100);
+    background-color: var(--color-gray-100);
     box-shadow: var(--shadow-hover-primary);
     border: 1px solid transparent;
 }
@@ -73,37 +73,37 @@
 
 .btn-secondary:disabled {
     background-color: var(--color-white);
-    border: 1px solid var(--gray-200);
-    color: var(--gray-300);
+    border: 1px solid var(--color-gray-200);
+    color: var(--color-gray-300);
     cursor: not-allowed;
 }
 
 .btn-secondary-gray {
-    background-color: var(--gray-50);
-    color: var(--gray-700);
-    border: 1px solid var(--gray-300);
+    background-color: var(--color-gray-50);
+    color: var(--color-gray-700);
+    border: 1px solid var(--color-gray-300);
     border-radius: var(--radius-xl);
 }
 
 .btn-secondary-gray:hover {
-    background-color: var(--gray-200);
+    background-color: var(--color-gray-200);
     box-shadow: var(--shadow-hover-primary);
 }
 
 .btn-secondary-gray:focus {
-    background-color: var(--gray-50);
+    background-color: var(--color-gray-50);
     box-shadow: var(--shadow-focus-secondary);
 }
 
 .btn-secondary-gray:disabled {
-    background-color: var(--gray-50);
-    border: 1px solid var(--gray-200);
+    background-color: var(--color-gray-50);
+    border: 1px solid var(--color-gray-200);
 }
 
 .btn-text{}
 
 .btn-text:disabled{
-    color: var(--gray-300);
+    color: var(--color-gray-300);
 }
 
 .btn-icon {

@@ -18,14 +18,14 @@
 
 .iconbox:disabled {
     cursor: not-allowed;
-    background-color: var(--gray-100);
+    background-color: var(--color-gray-100);
     box-shadow: var(--shadow-md);
 }
 .icon{
     color: var(--color-white);
 }
 .iconbox:disabled .icon {
-    color: var(--gray-300);
+    color: var(--color-gray-300);
 }
 
 .iconbox-2xs{
