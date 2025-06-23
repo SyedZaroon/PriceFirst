@@ -4,6 +4,7 @@ import "./styles/reset.css";
 import "./styles/variables.css";
 import Layout from "./components/Layout";
 
+
 function App() {
   const router = createBrowserRouter([
     {

@@ -1,7 +1,7 @@
 import React, { Children } from 'react'
 import styles from './radio.module.css'
 
-const Radiobutton = ({
+const RadioButton = ({
   children,
   size = "sm",
   disabled = false,
@@ -28,4 +28,4 @@ const Radiobutton = ({
   );
 };
 
-export default Radiobutton
+export default RadioButton

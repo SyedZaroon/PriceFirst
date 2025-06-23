@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './header.module.css'
 import { NavLink } from 'react-router-dom'
-import logo from '../../assets/images/PriceFirst.png'
+import logo from "@/assets/images/PriceFirst.png";
+
 
 const Header = () => {
   return (

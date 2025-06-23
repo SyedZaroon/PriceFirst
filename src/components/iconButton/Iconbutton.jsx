@@ -1,10 +1,12 @@
-import React from 'react'
-import styles from './iconbutton.module.css' 
+import React, { Children } from 'react'
+import styles from './iconButton.module.css' 
+import Plus from '../../assets/icons/Plus';
 
-const Iconbutton = (
+const IconButton = (
     {
         size = "sm",
-        disabled = false
+    disabled = false,
+        children 
     }) => {
 
     const iconbox = [
@@ -21,10 +23,10 @@ const Iconbutton = (
     return (
       <>
         <button className={iconbox} disabled={disabled}>
-          <Plus className={iconclass} />
+          {React.isValidElement(children)? React.cloneElement(children, { className: iconclass }): <Plus className={iconclass} />}
         </button>
       </>
     );
 }
 
-export default Iconbutton
+export default IconButton
