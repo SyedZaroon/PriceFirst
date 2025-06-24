@@ -14,7 +14,7 @@ const Check = ({ className = "", style = {} }) => {
       >
         <path
           d="M0.75 7.625L5.75 12.625L13.25 1.375"
-          stroke="white"
+          stroke="currentColor"
           stroke-width="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"

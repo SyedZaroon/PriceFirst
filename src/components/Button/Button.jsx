@@ -6,6 +6,7 @@ const Button = ({
   size = "",
   variant = "",
   disabled = false,
+  icon="",
   className = "",
   ...props
 }) => {
@@ -18,10 +19,16 @@ const Button = ({
     ]
       .filter(Boolean)
       .join(" ");
+  
+  const iconClass = [
+    styles.icon
+  ].filter(Boolean)
+      .join(" ");
 
   return (
-    <button className={classes} disabled={disabled} {...props}>
+    <button className={classes} disabled={disabled} {...props} >
       {children}
+      {icon && React.cloneElement(icon, { className: iconClass })}
     </button>
   );
 };

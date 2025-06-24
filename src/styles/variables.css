@@ -14,21 +14,21 @@
     --fontw-extra-bold: 800;
     --fontw-black: 900;
 
-    --lh-h1: clamp(2.5rem, 140%, 3rem);
-    --lh-h2: clamp(2rem, 140%, 2.5rem);
-    --lh-h3: clamp(1.75rem, 140%, 2rem);
-    --lh-h4: clamp(1.5rem, 140%, 1.75rem);
-    --lh-h5: clamp(1.25rem, 140%, 1.5rem);
-    --lh-h6: clamp(1.125rem, 140%, 1.25rem);
-    --lh-body-1: clamp(1.75rem, 140%, 2rem);
-    --lh-body-2: clamp(1.5rem, 140%, 1.75rem);
-    --lh-body-3: clamp(1.25rem, 140%, 1.5rem);
-    --lh-body-4: clamp(1rem, 140%, 1.25rem);
+    --lh-h-1: clamp(2.5rem, 5vw, 3rem);
+    --lh-h-2: clamp(2rem, 4.5vw, 2.5rem);
+    --lh-h-3: clamp(1.75rem, 4vw, 2rem);
+    --lh-h-4: clamp(1.25rem, 3.5vw, 1.5rem);
 
-    --fs-h1: clamp(2.5rem, 5vw + 1rem, 3rem);
-    --fs-h2: clamp(2rem, 4vw + 0.5rem, 2.5rem);
-    --fs-h3: clamp(1.75rem, 3vw + 0.25rem, 2rem);
-    --fs-h4: clamp(1.5rem, 2.5vw, 1.5rem);
+    --lh-body-1: clamp(1.125rem, 2.5vw, 1.25rem);
+    --lh-body-2: clamp(1rem, 2vw, 1rem);
+    --lh-body-3: clamp(0.875rem, 1.8vw, 0.875rem);
+    --lh-body-4: clamp(0.75rem, 1.5vw, 0.75rem);
+
+
+    --fs-h-1: clamp(2.5rem, 5vw + 1rem, 3rem);
+    --fs-h-2: clamp(2rem, 4vw + 0.5rem, 2.5rem);
+    --fs-h-3: clamp(1.75rem, 3vw + 0.25rem, 2rem);
+    --fs-h-4: clamp(1.5rem, 2.5vw, 1.5rem);
     --fs-body-1: clamp(1.125rem, 2vw, 1.25rem);
     --fs-body-2: clamp(1rem, 1.5vw, 1rem);
     --fs-body-3: clamp(0.875rem, 1.2vw, 0.875rem);
@@ -37,7 +37,7 @@
 
     --color-white: #FFFFFF;
     --color-black: #000000;
-    
+
     --color-accent-100: #FFFCF3;
     --color-accent-200: #FFFAEC;
     --color-accent-300: #FFF5D8;

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./checkbox.module.css";
-import Check from "../../icons/check";
+import Check from "../../assets/icons/Check";
 
 const Checkbox = ({
   children,

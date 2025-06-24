@@ -10,3 +10,43 @@ h5,
 h6{
     font-family: var(--font-futuru);
 }
+
+h1 {
+    font-size: var(--fs-h1);
+    line-height: var(--lh-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    line-height: var(--lh-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+    line-height: var(--lh-h3);
+}
+
+h4 {
+    font-size: var(--fs-h4);
+    line-height: var(--lh-h4);
+}
+
+.body1 {
+    font-size: var(--fs-body-1);
+    line-height: var(--lh-body-1);
+}
+
+.body2 {
+    font-size: var(--fs-body2);
+    line-height: var(--lh-body2);
+}
+
+.body3 {
+    font-size: var(--fs-body3);
+    line-height: var(--lh-body3);
+}
+
+.body4 {
+    font-size: var(--fs-body4);
+    line-height: var(--lh-body4);
+}

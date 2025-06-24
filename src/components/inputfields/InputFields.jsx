@@ -33,13 +33,10 @@ const InputFields = ({
     .join(" ");
 
   return (
-    
     <div className={styles["input-box"]}>
-      
       {label && <span className={styles["input-label"]}>{label}</span>}
 
       <div className={iconWrapperClasses}>
-        
         {prefixIcon && (
           <span className={styles["prefix-icon"]}>{prefixIcon}</span>
         )}
@@ -52,12 +49,22 @@ const InputFields = ({
         />
 
         {suffixIcon && (
-          <span className={styles["suffix-icon"]}>{suffixIcon}</span>
+          <span
+            className={[
+              styles["suffix-icon"],
+              error && styles["error-icon"],
+              success && styles["success-icon"], 
+            ]
+              .filter(Boolean)
+              .join(" ")}
+          >
+            {suffixIcon}
+          </span>
         )}
+
       </div>
 
       {error && <span className={styles["input-label"]}>{errormessage}</span>}
-
     </div>
   );
 };

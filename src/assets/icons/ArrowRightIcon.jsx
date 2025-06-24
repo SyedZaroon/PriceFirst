@@ -9,7 +9,7 @@ export default ({ ...props }) => (
   >
     <path
       d="M9.125 1.375L14.75 7M14.75 7L9.125 12.625M14.75 7H1.25"
-      stroke="white"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
