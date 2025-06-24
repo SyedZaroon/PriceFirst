@@ -28,7 +28,6 @@
 }
 
 
-
 .input-field::placeholder {
     font-family: var(--font-inter);
     font-weight: var(--fontw-regular);
@@ -61,10 +60,41 @@
     justify-content: center;
 }
 
+.disabled .prefix-icon,
+.disabled .suffix-icon,
+.disabled .suffix-icon button{
+    color: var(--color-gray-300);
+}
+
 .error-icon{
     color: var(--color-error-600);
 }
 
 .success-icon {
     color: var(--color-success-700);
+}
+
+.text-field{
+    border: 0;
+    border-bottom: 1px solid var(--color-gray-300);
+    border-radius: 0px;
+}
+
+.text-field:focus-within {
+    border: 0;
+    border-bottom: 1px solid var(--color-black);
+    border-radius: 0px;
+}
+
+.text-field.input-error{
+    border-bottom: 1px solid var(--color-error-600);
+}
+
+.text-field.input-success {
+    border-bottom: 1px solid var(--color-success-700);
+}
+
+.disabled.text-field{
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-gray-200);
 }

@@ -6,6 +6,7 @@ import ArrowRightIcon from '../../assets/icons/ArrowRightIcon';
 import IconButton from '../iconButton/Iconbutton';
 import Button from '../button/Button';
 import Checkbox from '../checkbox/Checkbox'
+import Check from '../../assets/icons/Check';
 const Footer = () => {
   return (
     <>
@@ -31,11 +32,7 @@ const Footer = () => {
         <ArrowRightIcon />
       </IconButton> */}
       <div>
-        <Checkbox size="sm"></Checkbox>
-        <Checkbox size="md"></Checkbox>
-        <Checkbox size="lg"></Checkbox>
-        <Checkbox size="lg" disabled={true}></Checkbox>
-        <Checkbox size="lg" disabled={true}></Checkbox>
+        <InputFields  label='label'  disabled={true} suffixIcon={<Sms  size='2xs' />}  prefixIcon={<Sms />} />
       </div>
     </>
   );

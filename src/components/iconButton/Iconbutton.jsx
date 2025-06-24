@@ -6,7 +6,7 @@ const IconButton = (
     {
         size = "sm",
     disabled = false,
-        children 
+        icon = null 
     }) => {
 
     const iconbox = [
@@ -23,7 +23,7 @@ const IconButton = (
     return (
       <>
         <button className={iconbox} disabled={disabled}>
-          {React.isValidElement(children)? React.cloneElement(children, { className: iconclass }): <Plus className={iconclass} />}
+          {React.isValidElement(icon)? React.cloneElement(icon, { className: iconclass }): <Plus className={iconclass} />}
         </button>
       </>
     );

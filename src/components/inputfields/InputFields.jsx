@@ -4,7 +4,7 @@ import styles from "./inputfields.module.css";
 const InputFields = ({
   label = "",
   errormessage = "Error message",
-  type = "text",
+  type = "",
   className = "",
   placeholder = "Value",
   disabled = false,
@@ -27,7 +27,8 @@ const InputFields = ({
     error ? styles["input-error"] : "",
     success ? styles["input-success"] : "",
     styles["input-field-box"],
-    disabled ? styles["disabled"] : ""
+    disabled ? styles["disabled"] : "",
+    type==="text" ? styles["text-field"] : ""
   ]
     .filter(Boolean)
     .join(" ");
@@ -58,7 +59,7 @@ const InputFields = ({
               .filter(Boolean)
               .join(" ")}
           >
-            {suffixIcon}
+            {React.isValidElement(suffixIcon)? React.cloneElement(suffixIcon, {disabled}): suffixIcon}
           </span>
         )}
 
