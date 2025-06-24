@@ -4,11 +4,8 @@ import Sms from '../../assets/icons/Sms';
 import InputFields from '../inputFields/InputFields';
 import ArrowRightIcon from '../../assets/icons/ArrowRightIcon';
 import IconButton from '../iconButton/Iconbutton';
-import RadioButton from "../radioButton/RadioButton";
-import Label from '../labels/Label';
-import Dots from '../../assets/icons/Dots';
-import ArrowSmallUp from '../../assets/icons/ArrowSmallUp';
-import Xmark from '../../assets/icons/Xmark';
+import Button from '../button/Button';
+import Checkbox from '../checkbox/Checkbox'
 const Footer = () => {
   return (
     <>
@@ -33,17 +30,13 @@ const Footer = () => {
       <IconButton size="xs">
         <ArrowRightIcon />
       </IconButton> */}
-
-      <Label size="lg" type="icon" success={true} prefixIcon={<ArrowSmallUp />} suffixIcon={<Xmark />} />
-      <br></br>
-      <Label size="lg" type="dot" success={true} prefixIcon={<Dots />} />
-      <br></br>
-      <Label size="sm" type="simple" state="primary" error={true} />
-      <br></br>
-      <Label size="md" type="simple" state="primary" warning={true} />
-      <br></br>
-      <Label size="sm" type="simple" state="primary" success={true} />
-      <br></br>
+      <div>
+        <Checkbox size="sm"></Checkbox>
+        <Checkbox size="md"></Checkbox>
+        <Checkbox size="lg"></Checkbox>
+        <Checkbox size="lg" disabled={true}></Checkbox>
+        <Checkbox size="lg" disabled={true}></Checkbox>
+      </div>
     </>
   );
 }

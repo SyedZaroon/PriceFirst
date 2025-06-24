@@ -1,32 +1,27 @@
 import React from "react";
 import styles from "./checkbox.module.css";
-import Check from "../../assets/icons/Check";
+import Check from "../../assets/icons/Check"
 
 const Checkbox = ({
-  children,
-  icon = <Check />,
+  label = "Defaule",
   size = "sm",
-  className = "",
   disabled = false,
-}) => {
-  const classes = [styles.checkmark, styles[`checkmark-${size}`], className]
-    .filter(Boolean)
-    .join(" ");
 
-  const Checkclasses = [styles.check, styles[`check-${size}`]]
-    .filter(Boolean)
-    .join(" ");
+}) => {
+  
+  const customCheckbox = [
+    styles["custom-checkbox"],
+    styles[`custom-checkbox-${size}`]
+  ].filter(Boolean).join(" ");
 
   return (
     <>
       <label className={styles["checkbox-wrapper"]}>
-        <input type="checkbox" disabled={disabled} />
-        <span className={classes}>
-          {React.cloneElement(icon, {
-            className: `${icon.props.className || ""} ${Checkclasses}`.trim(),
-          })}
+        <input type="checkbox" disabled={disabled}  />
+        <span className={customCheckbox}>
+          <Check className={styles["check-icon"]} />
         </span>
-        {children}
+        <span className={styles["label-text"]}>{label}</span>
       </label>
     </>
   );
