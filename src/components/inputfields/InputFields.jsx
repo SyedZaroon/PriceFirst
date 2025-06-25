@@ -22,12 +22,13 @@ const InputFields = ({
     .join(" ");
 
   const iconWrapperClasses = [
+    styles["input-field"],
     prefixIcon ? styles["prefixIcon-box"] : "",
     suffixIcon ? styles["suffixIcon-box"] : "",
     error ? styles["input-error"] : "",
     success ? styles["input-success"] : "",
-    styles["input-field-box"],
-    disabled ? styles["disabled"] : "",
+    styles[`input-field-${type}`],
+    disabled ? styles[`disabled-${type}`] : "",
     type==="text" ? styles["text-field"] : ""
   ]
     .filter(Boolean)
@@ -45,6 +46,7 @@ const InputFields = ({
         <input
           className={inputClasses}
           type={type}
+          error="error"
           placeholder={placeholder}
           disabled={disabled}
         />

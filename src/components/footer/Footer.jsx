@@ -10,13 +10,15 @@ import Check from '../../assets/icons/Check';
 const Footer = () => {
   return (
     <>
-      {/* <div className={styles["footer"]}>
+      <div className={styles["footer"]}>
         <div className={styles["footer-box"]}>
           <div className={styles["footer-box-top"]}>
             <div className={styles["footer-box-top-row1"]}>
               <h1>Start Selling With Us</h1>
               <InputFields
+                disabled={true}
                 placeholder="Enter Your Email"
+                type='underline'
                 prefixIcon={<Sms />}
                 suffixIcon={
                   <IconButton size="2xs">
@@ -30,10 +32,7 @@ const Footer = () => {
       </div>
       <IconButton size="xs">
         <ArrowRightIcon />
-      </IconButton> */}
-      <div>
-        <InputFields  label='label'  disabled={true} suffixIcon={<Sms  size='2xs' />}  prefixIcon={<Sms />} />
-      </div>
+      </IconButton>
     </>
   );
 }

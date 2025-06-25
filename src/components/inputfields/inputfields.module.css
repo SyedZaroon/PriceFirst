@@ -10,21 +10,23 @@
     font-size: var(--fs-body-3);
 }
 
-.input-field-box {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-gray-300);
+.input-field {
+   
     padding: 12px;
-    border-radius: var(--radius-md);
+    
     width: 100%;
     display: flex;
     align-items: center;
     gap: 4px;
+    outline: 0;
+        border: 0;
+        flex: 1;
 }
 
-.input-field {
-    outline: 0;
-    border: 0;
-    flex: 1;
+.input-field-border {
+    background-color: var(--color-white);
+        border: 1px solid var(--color-gray-300);
+        border-radius: var(--radius-md);
 }
 
 
@@ -34,20 +36,20 @@
     font-size: var(--fs-body-3);
 }
 
-.input-field-box:focus-within {
+.input-field-border:focus-within {
     border: 1px solid var(--color-black);
     outline: none;
 }
 
-.input-error {
+.input-field-border.input-error {
     border: 1px solid var(--color-error-600);
 }
 
-.input-success {
+.input-field-border.input-success {
     border: 1px solid var(--color-success-700);
 }
 
-.disabled {
+.disabled-border {
     background-color: var(--color-gray-100);
     border: 1px solid var(--color-gray-200);
     cursor: not-allowed;
@@ -66,7 +68,8 @@
     color: var(--color-gray-300);
 }
 
-.error-icon{
+.error-icon
+{
     color: var(--color-error-600);
 }
 
@@ -74,27 +77,24 @@
     color: var(--color-success-700);
 }
 
-.text-field{
-    border: 0;
+.input-field-underline{
+    
     border-bottom: 1px solid var(--color-gray-300);
-    border-radius: 0px;
+   
 }
-
-.text-field:focus-within {
-    border: 0;
-    border-bottom: 1px solid var(--color-black);
-    border-radius: 0px;
-}
-
-.text-field.input-error{
+.input-field-underline.input-error {
     border-bottom: 1px solid var(--color-error-600);
 }
-
-.text-field.input-success {
+.input-field-underline.input-success {
     border-bottom: 1px solid var(--color-success-700);
 }
 
-.disabled.text-field{
+.input-field-underline:focus-within {
+    border-bottom: 1px solid var(--color-black);
+}
+
+.disabled-underline{
     background-color: transparent;
     border-bottom: 1px solid var(--color-gray-200);
+    cursor: not-allowed;
 }
