@@ -15,7 +15,6 @@ const InputFields = ({
 }) => {
   const inputClasses = [
     styles["input-field"],
-    className,
     prefixIcon || suffixIcon ? styles["icon-input-field"] : "",
   ]
     .filter(Boolean)
@@ -29,7 +28,8 @@ const InputFields = ({
     success ? styles["input-success"] : "",
     styles[`input-field-${type}`],
     disabled ? styles[`disabled-${type}`] : "",
-    type==="text" ? styles["text-field"] : ""
+    type === "text" ? styles["text-field"] : "",
+    className,
   ]
     .filter(Boolean)
     .join(" ");

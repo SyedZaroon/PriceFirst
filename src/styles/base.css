@@ -1,5 +1,6 @@
 body{
     font-family: var(--font-inter);
+    
 }
 
 h1,
@@ -9,44 +10,43 @@ h4,
 h5,
 h6{
     font-family: var(--font-futuru);
+    line-height: 140%;
+}
+
+p,
+ul,
+li {
+    line-height: 140%;
 }
 
 h1 {
-    font-size: var(--fs-h1);
-    line-height: var(--lh-h1);
+     font-size: var(--fs-h-1); /* 48px */
 }
 
 h2 {
-    font-size: var(--fs-h2);
-    line-height: var(--lh-h2);
+    font-size: var(--fs-h-2); /* 40px */
 }
 
 h3 {
-    font-size: var(--fs-h3);
-    line-height: var(--lh-h3);
+    font-size: var(--fs-h-3); /* 32px */
 }
 
 h4 {
-    font-size: var(--fs-h4);
-    line-height: var(--lh-h4);
+    font-size: var(--fs-h-4); /* 24px */
 }
 
 .body1 {
-    font-size: var(--fs-body-1);
-    line-height: var(--lh-body-1);
+    font-size: var(--fs-body-1); /* 20px */
 }
 
 .body2 {
-    font-size: var(--fs-body2);
-    line-height: var(--lh-body2);
+    font-size: var(--fs-body-2); /* 16px */
 }
 
 .body3 {
-    font-size: var(--fs-body3);
-    line-height: var(--lh-body3);
+    font-size: var(--fs-body-3); /* 14px */
 }
 
 .body4 {
-    font-size: var(--fs-body4);
-    line-height: var(--lh-body4);
+    font-size: var(--fs-body-4); /* 12px */
 }

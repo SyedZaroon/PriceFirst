@@ -1,0 +1,54 @@
+.home-banner{
+    max-width: var(--box-width);
+    background-color: var(--color-accent-300);
+    margin: 40px auto;
+    border-radius: var(--radius-2xl);
+    height: 352px;
+
+    display: grid;
+    grid-template-columns: 562px 370px;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+}
+
+.home-banner-content{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.banner-heading{
+    font-weight: var(--fontw-extra-bold);
+    line-height: 120%;
+}
+
+.banner-heading span{
+    font-weight: var(--fontw-bold);
+    opacity: 80%;
+}
+
+.banner-description{
+    font-weight: var(--fs-body-2);
+    font-weight: var(--fontw-regular);
+    color: var(--color-gray-600);
+    width: 370px;
+}
+.banner-newsletter{
+    width: 536px;
+    
+}
+.newsletter-field{
+    border-radius: var(--radius-2xl);
+    border-color: var(--color-accent-900);
+}
+
+.banner-img{
+    position: absolute;
+    right: 150px;
+    bottom: 0;
+    height: 380px;
+
+    object-fit: cover;
+}

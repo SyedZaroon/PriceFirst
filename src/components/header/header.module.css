@@ -24,3 +24,9 @@
     font-size: var(--fs-body-3);
 
 }
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
