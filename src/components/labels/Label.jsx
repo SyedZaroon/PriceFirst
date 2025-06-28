@@ -10,6 +10,7 @@ const Label = ({
   warning = false,
   prefixIcon = null,
   suffixIcon = null,
+  className = ""
 }) => {
   const state = error
     ? "error"
@@ -23,6 +24,7 @@ const Label = ({
     styles[`label-${type}`],
     styles[`label-${size}`],
     styles[`label-${state}`],
+    className,
   ]
     .filter(Boolean)
     .join(" ");

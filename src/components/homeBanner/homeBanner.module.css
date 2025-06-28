@@ -1,7 +1,6 @@
 .home-banner{
-    max-width: var(--box-width);
     background-color: var(--color-accent-300);
-    margin: 40px auto;
+    margin: 40px 32px;
     border-radius: var(--radius-2xl);
     height: 352px;
 

@@ -4,8 +4,7 @@ grid-template-columns: 273px 293px 280px 289px ;
     justify-content: space-between;
     gap: 64px;
 
-    width: var(--box-width);
-    margin: 40px auto;
+    margin: 72px 32px;
 }
 .compare-component .compare-box:nth-child(-n+3){
 position: relative;

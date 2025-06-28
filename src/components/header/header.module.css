@@ -1,8 +1,7 @@
 .header{
     background-color: var(--color-black);
     border-radius: var(--radius-2xl);
-   max-width: var(--box-width);
-    margin: 16px auto;
+    margin: 16px 20px;
     padding: 24px 40px;
 
     display: flex;

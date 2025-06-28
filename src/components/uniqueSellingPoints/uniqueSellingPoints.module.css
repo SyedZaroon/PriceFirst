@@ -1,0 +1,9 @@
+.unique-box {
+    margin: 80px 140px;
+}
+.unique-grid{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 29px;
+}

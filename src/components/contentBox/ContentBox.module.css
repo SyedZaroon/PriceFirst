@@ -1,0 +1,28 @@
+.content-box{
+    border: 1px solid var(--color-gray-200);
+    padding: 24px;
+    border-radius: var(--radius-xl);
+    max-width: 598px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.content-title{
+    font-weight: var(--fontw-semi-bold);
+    font-size: var(--fs-body-1);
+}
+
+.content-desc{
+    font-size: var(--fs-body-3);
+    color: var(--color-gray-700);
+    line-height: 160%;
+}
+
+.content-box:hover{
+    background-color: var(--color-accent-200);
+    border: 1px solid var(--color-accent-700);
+}

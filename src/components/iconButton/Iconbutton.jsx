@@ -6,13 +6,13 @@ const IconButton = (
     {
         size = "sm",
     disabled = false,
-        icon = null 
+    icon = null,
+        className=""
     }) => {
 
-    const iconbox = [
-        styles.iconbox,
-        styles[`iconbox-${size}`]
-    ].filter(Boolean).join(" ");
+    const iconbox = [styles.iconbox, styles[`iconbox-${size}`], className]
+      .filter(Boolean)
+      .join(" ");
 
     const iconclass = [
         styles.icon,
