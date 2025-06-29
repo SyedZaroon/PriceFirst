@@ -6,6 +6,7 @@ import WhyUs from '../../components/whyUs/WhyUs'
 import Trustpilot from '../../components/trustPilot/Trustpilot'
 import UniqueSellingPoints from '../../components/uniqueSellingPoints/UniqueSellingPoints'
 import FrequentlyQuestion from '../../components/frequentlyQuestion/FrequentlyQuestion'
+import OurPatner from '../../components/ourPatner/OurPatner'
 
 const OfferPage = () => {
   return (
@@ -17,6 +18,7 @@ const OfferPage = () => {
       <Trustpilot />
       <UniqueSellingPoints />
       <FrequentlyQuestion />
+      <OurPatner />
     </div>
   )
 }
