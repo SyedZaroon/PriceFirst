@@ -12,7 +12,7 @@ const IconBox = ({
       <h4 className={styles["iconbox-title"]}>{title}</h4>
       <p className={styles["iconbox-desc"]}>{desc}</p>
       <span className={styles.icon} >
-        {React.cloneElement(icon, {svg: styles.svg, path: styles.path })}
+        {React.cloneElement(icon, {svgClass: styles.svg, pathClass: styles.path })}
       </span>
     </div>
   );

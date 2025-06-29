@@ -1,0 +1,26 @@
+.faq-section{
+    margin: 80px 140px;
+
+    display: grid;
+    grid-template-columns: 380px 678px ;
+
+    justify-content: space-between;
+    
+}
+
+.faq-title{
+    font-weight: 600;
+}
+.faq-title span{
+    color: var(--color-accent-700);
+}
+
+.faq-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn{
+    width: fit-content;
+}

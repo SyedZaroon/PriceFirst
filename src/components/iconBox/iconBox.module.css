@@ -31,8 +31,16 @@
 
 .icon{
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 2.5px;
+    right: 2.5px;
+
+    transition: all 0.3s ease-in-out;
+
+   
+}
+.svg {
+    width: 56px ;
+        height: 56px;
 }
 .path{
     fill: var(--color-gray-200);
@@ -41,4 +49,8 @@
 
 .iconbox:hover .path{
     fill: var(--color-accent-700);
+}
+
+.iconbox:hover .icon {
+    transform: rotate(30deg);
 }

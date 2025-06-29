@@ -25,9 +25,9 @@ const Footer = () => {
                   prefixIcon={<Sms />}
                   suffixIcon={
                     <IconButton
-                      icon={<ArrowRightIcon />}
+                      icon={<ArrowRightIcon pathClass={styles.path} />}
                       size="2xs"
-                    ></IconButton>
+                    />
                   }
                 />
               </div>
@@ -66,13 +66,13 @@ const Footer = () => {
                 </ul>
                 <ul className={[styles["footer-body-social"]].join(" ")}>
                   <li>
-                   <Instagram/>
+                    <Instagram />
                   </li>
                   <li>
-                   <Facebook/>
+                    <Facebook />
                   </li>
                   <li>
-                   <LinkdIn/>
+                    <LinkdIn />
                   </li>
                 </ul>
               </div>
