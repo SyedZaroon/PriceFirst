@@ -2,21 +2,30 @@ import React from "react";
 import styles from "./faqs.module.css";
 import ArrowDown from "../../assets/icons/ArrowDown";
 
-const Faqs = ({ title = "First Question", desc = "This is First answer" }) => {
+const Faqs = ({ title, desc, isOpen, onToggle }) => {
   return (
-    <>
-      <details className={styles["faq-section"]}>
-        <summary className={styles["faq-summary"]}>
-          <h4 className={styles["faq-title"]}>{title}</h4>
-          <ArrowDown pathClass={styles.path} svgClass={styles.svg} />
-        </summary>
-        {
-          <div className={styles["faq-detail"]}>
-            <p className={styles["faq-description"]}>{desc}</p>
-          </div>
+    <div className={`${styles["faq-section"]} ${isOpen ? styles.open : ""}`}>
+      <div
+        className={
+          `${styles["faq-summary"]} ${isOpen ? styles["faq-summary-open"] : ""} `
         }
-      </details>
-    </>
+        onClick={onToggle}
+      >
+        <h4 className={styles["faq-title"]}>{title}</h4>
+        <ArrowDown
+          pathClass={styles.path}
+          svgClass={`${styles.svg} ${isOpen ? styles.rotate : ""}`}
+        />
+      </div>
+
+      <div
+        className={`${styles["faq-detail"]} ${
+          isOpen ? styles.show : ""
+        }`}
+      >
+        <p className={styles["faq-description"]}>{desc}</p>
+      </div>
+    </div>
   );
 };
 

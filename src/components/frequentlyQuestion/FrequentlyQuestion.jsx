@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './frequentlyQuestion.module.css'
 import Button from '../button/Button'
 import Faqs from '../faqs/Faqs'
 
+
 const FrequentlyQuestion = () => {
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+
 
     const faqs = [
       {
@@ -30,27 +35,30 @@ const FrequentlyQuestion = () => {
 
   return (
     <div className={styles["faq-section"]}>
-      
-          <div className={styles["faq-content"]}>
+      <div className={styles["faq-content"]}>
         <h2 className={styles["faq-title"]}>
-          Frequently Asked<span><br></br> Questions</span>
+          Frequently Asked
+          <span>
+            <br></br> Questions
+          </span>
         </h2>
         <p>Still have a questions in mind?</p>
         <Button className={styles.btn} variant="primary" size="sm">
           Ask a Question
         </Button>
-      
-          </div>
+      </div>
 
-          <div className={styles["faq-body"]}>
-              {
-                  faqs.map((value) => {
-                      return (
-                          <Faqs title={value.title} desc={value.desc} />
-                      )
-                  })
-              }
-          </div>
+      <div className={styles["faq-body"]}>
+        {faqs.map((item, index) => (
+          <Faqs
+            key={index}
+            title={item.title}
+            desc={item.desc}
+            isOpen={openIndex === index}
+            onToggle={() => setOpenIndex(openIndex === index ? null : index)}
+          />
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,19 +1,9 @@
-summary {
-    list-style: none;
-    cursor: pointer;
-}
-
-summary::-webkit-details-marker {
-    display: none;
-}
-
-.faq-section{
+.faq-section {
     margin-bottom: 12px;
-
     transition: all 0.3s ease-in-out;
 }
 
-.faq-summary{
+.faq-summary {
     border: 1px solid var(--color-gray-200);
     padding: 20px 24px;
     border-radius: var(--radius-xl);
@@ -22,48 +12,59 @@ summary::-webkit-details-marker {
     justify-content: space-between;
     align-items: center;
 }
-.svg{
-    width: 24px;
-    height: 24px;
 
-    transition: all 0.3s ease-in-out;
-}
-
-.path{
-    stroke: var(--color-black);
-}
-
-.faq-section:open .svg{
-    transform: rotate(180deg);
-}
-
-.faq-section:open .faq-summary {
+.faq-summary-open {
     border-bottom: 0px;
     border-radius: var(--radius-xl) var(--radius-xl) 0px 0px;
 }
 
-.faq-detail  {
-   border-width: 0px 1px 1px 1px;
-   border-style: solid;
-   border-color: var(--color-gray-200) ;
-border-radius: 0px 0px var(--radius-xl) var(--radius-xl);
- padding: 0px 24px 20px;
-
-   
+.svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
 }
 
-.faq-section:open{
-    background-color: var(--color-gray-50);
-    border-radius: var(--radius-xl);
+.path {
+    stroke: var(--color-black);
 }
 
-.faq-title{
+.rotate {
+    transform: rotate(180deg);
+}
+
+
+
+.faq-detail {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 24px 0;
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    border-color: var(--color-gray-200);
+    border-radius: 0px 0px var(--radius-xl) var(--radius-xl);
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.show {
+    max-height: 500px;
+    opacity: 1;
+    padding: 0px 24px 20px;
+    border-width: 0px 1px 1px 1px;
+}
+
+.faq-title {
     font-size: var(--fs-body-1);
     font-weight: var(--fontw-semi-bold);
 }
 
-.faq-description{
+.faq-description {
     font-size: var(--fs-body-3);
     line-height: 160%;
     color: var(--color-gray-700);
+}
+
+.open{
+    background-color: var(--color-gray-50);
+    border-radius: var(--radius-xl);
 }
