@@ -1,6 +1,7 @@
-body{
+body {
     font-family: var(--font-inter);
-    
+    background-color: var(--color-black);
+
 }
 
 h1,
@@ -8,7 +9,7 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6 {
     font-family: var(--font-futuru);
     line-height: 140%;
 }
@@ -20,33 +21,55 @@ li {
 }
 
 h1 {
-     font-size: var(--fs-h-1); /* 48px */
+    font-size: var(--fs-h-1);
+    /* 48px */
 }
 
 h2 {
-    font-size: var(--fs-h-2); /* 40px */
+    font-size: var(--fs-h-2);
+    /* 40px */
 }
 
 h3 {
-    font-size: var(--fs-h-3); /* 32px */
+    font-size: var(--fs-h-3);
+    /* 32px */
 }
 
 h4 {
-    font-size: var(--fs-h-4); /* 24px */
+    font-size: var(--fs-h-4);
+    /* 24px */
 }
 
 .body1 {
-    font-size: var(--fs-body-1); /* 20px */
+    font-size: var(--fs-body-1);
+    /* 20px */
 }
 
 .body2 {
-    font-size: var(--fs-body-2); /* 16px */
+    font-size: var(--fs-body-2);
+    /* 16px */
 }
 
 .body3 {
-    font-size: var(--fs-body-3); /* 14px */
+    font-size: var(--fs-body-3);
+    /* 14px */
 }
 
 .body4 {
-    font-size: var(--fs-body-4); /* 12px */
+    font-size: var(--fs-body-4);
+    /* 12px */
+}
+
+.border {
+    border-radius: var(--radius-2xl) var(--radius-2xl) 0px 0px;
+    background-color: white;
+    padding: 16px 0px 0px 0px;
+}
+
+@media screen and (max-width:1023px) {
+    .border {
+        border-radius: 0px;
+        padding: 16px 0px 0px 0px;
+    }
+
 }

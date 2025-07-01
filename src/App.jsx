@@ -3,23 +3,22 @@ import "./styles/reset.css";
 import "./styles/variables.css";
 import "./styles/base.css";
 import Layout from "./components/Layout";
-import OfferPage from "./Pages/offerPage/OfferPage";
+import Home from "./pages/home/Home";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+    ],
+  },
+]);
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Layout />,
-      children: [
-        {
-          path: "/",
-          element: <OfferPage />
-        }
-      ]
-    },
-  ]);
-
   return (
     <>
       <RouterProvider router={router} />

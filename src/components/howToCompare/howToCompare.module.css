@@ -1,46 +1,49 @@
-.compare-component{
+.compare-component {
     display: grid;
-grid-template-columns: 273px 293px 280px 289px ;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
     gap: 64px;
 
-    margin: 72px 32px;
+    margin: clamp(32px,2vw + 32px,72px) 32px;
 }
-.compare-component .compare-box:nth-child(-n+3){
-position: relative;
+
+.compare-component > .compare-box:not(:nth-child(4)) {
+    position: relative;
 }
-.compare-box{
+
+.compare-box {
     display: flex;
     gap: 12px;
     align-items: flex-start;
 
-    
+
 }
 
-.compare-box::after{
-   position: absolute;
-   content: ">";
-   top:50%;
-   right:-15%; 
+.compare-component>.compare-box:not(:nth-child(4))::after {
+    position: absolute;
+    content: ">";
+    top: 50%;
+    right: -15%;
 }
 
-.compare-title{
+.compare-title {
     font-weight: var(--fontw-bold);
     font-size: var(--fs-body-1);
 }
 
-.compare-content{
+.compare-content {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.compare-description{
+.compare-description {
     color: var(--color-gray-600);
     font-size: var(--fs-body-3);
 }
+
 .step-circle {
-   min-width: 28px;
+    min-width: 28px;
     min-height: 28px;
     border: 1px solid var(--color-gray-300);
     border-radius: var(--radius-full);
@@ -58,9 +61,44 @@ position: relative;
 
 .compare-box:hover .step-circle {
     background-color: var(--color-black);
-    
+
 }
 
 .compare-box:hover .step-number {
     color: var(--color-white);
+}
+
+@media screen and (max-width:1024px) {
+    .compare-component{
+        grid-template-columns: 1fr 1fr;
+    }
+    .compare-box::after{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+    .compare-component {
+            grid-template-columns: 1fr;
+            gap: 24px;
+            position: relative;
+        }
+        .compare-component::after{
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 82%;
+            background-image: repeating-linear-gradient(to bottom,
+                        var(--color-gray-600),
+                        var(--color-gray-600) 5px,
+                        transparent 5px,
+                        transparent 15px);
+                        left:13px;
+                        z-index:1
+            
+        }
+        .compare-box{
+            z-index:2;
+        }
 }

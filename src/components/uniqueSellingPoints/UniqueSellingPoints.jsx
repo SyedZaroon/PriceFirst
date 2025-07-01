@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "./uniqueSellingPoints.module.css";
 import IconBox from "../iconBox/IconBox";
-import SecuritySafe from "../../assets/icons/SecuritySafe";
-import Box from "../../assets/icons/Box";
-import Clock from '../../assets/icons/Clock'
-import EyeSlash from "../../assets/icons/EyeSlash";
-import ShieldTick from "../../assets/icons/ShieldTick";
-import Verify from "../../assets/icons/Verify";
+import {
+  SecuritySafe,
+  Box,
+  Clock,
+  EyeSlash,
+  ShieldTick,
+  Verify,
+} from "iconsax-react";
 
 const UniqueSellingPoints = () => {
   const iconBoxData = [
@@ -50,7 +52,13 @@ const UniqueSellingPoints = () => {
             <h1>What Sets Us Apart</h1>
             <div className={styles["unique-grid"]}>
               {iconBoxData.map((value) => {
-                return <IconBox title={value.title} desc={value.desc} icon={value.icon} />;
+                return (
+                  <IconBox
+                    title={value.title}
+                    desc={value.desc}
+                    icon={value.icon}
+                  />
+                );
               })}
             </div>
           </div>

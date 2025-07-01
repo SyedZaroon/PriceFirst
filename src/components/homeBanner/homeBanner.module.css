@@ -1,53 +1,101 @@
-.home-banner{
+.home-banner {
     background-color: var(--color-accent-300);
     margin: 40px 32px;
     border-radius: var(--radius-2xl);
-    height: 352px;
 
     display: grid;
-    grid-template-columns: 562px 370px;
-    justify-content: space-around;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    justify-content: end;
+    align-content: end;
 
-    position: relative;
+    gap: 223px;
+
 }
 
-.home-banner-content{
+.home-banner-content {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    padding: 40px 0px 56px 56px;
 }
 
-.banner-heading{
+.banner-heading {
     font-weight: var(--fontw-extra-bold);
     line-height: 120%;
 }
 
-.banner-heading span{
+.banner-heading span {
     font-weight: var(--fontw-bold);
     opacity: 80%;
 }
 
-.banner-description{
+.banner-description {
     font-weight: var(--fs-body-2);
     font-weight: var(--fontw-regular);
     color: var(--color-gray-600);
     width: 370px;
 }
-.banner-newsletter{
-    width: 536px;
-    
-}
-.newsletter-field{
+
+.search-field {
     border-radius: var(--radius-2xl);
     border-color: var(--color-accent-900);
 }
 
-.banner-img{
+.banner-box {
+    position: relative;
+}
+
+.banner-img {
     position: absolute;
     right: 150px;
     bottom: 0;
-    height: 380px;
 
-    object-fit: cover;
+}
+
+@media screen and (max-width:1024px) {
+    .banner-description {
+        display: none;
+    }
+
+    .banner-heading {
+        order: 2;
+        text-align: center;
+
+    }
+
+    .home-banner-content {
+        padding: 0px 24px 40px;
+        order: 2;
+    }
+
+    .home-banner {
+        grid-template-columns: 1fr;
+        height: 550px;
+
+    }
+
+    .banner-box {
+        order: 1;
+        width: 260px;
+        margin: auto;
+    }
+
+    .banner-img {
+        left: 50%;
+        bottom: -224px;
+        transform: translateX(-50%);
+        object-fit: contain;
+    }
+}
+
+@media screen and (max-width:485px) {
+    .banner-img {
+        width: 200px;
+        bottom: -311px;
+    }
+
+    .home-banner {
+        height: 400px;
+    }
+
 }

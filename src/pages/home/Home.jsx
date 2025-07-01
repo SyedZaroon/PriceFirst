@@ -8,19 +8,19 @@ import UniqueSellingPoints from '../../components/uniqueSellingPoints/UniqueSell
 import FrequentlyQuestion from '../../components/frequentlyQuestion/FrequentlyQuestion'
 import OurPatner from '../../components/ourPatner/OurPatner'
 
-const OfferPage = () => {
+const Home = () => {
   return (
     <div>
       <HomeBanner />
       <HowToCompare />
-      <PopularDevice />
+      {/* <PopularDevice />
       <WhyUs />
       <Trustpilot />
       <UniqueSellingPoints />
       <FrequentlyQuestion />
-      <OurPatner />
+      <OurPatner /> */}
     </div>
-  )
+  );
 }
 
-export default OfferPage
+export default Home

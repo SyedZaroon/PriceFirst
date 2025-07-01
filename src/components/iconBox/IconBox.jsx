@@ -1,6 +1,6 @@
-import React from 'react'
-import styles from './iconBox.module.css'
-import SecuritySafe from '../../assets/icons/SecuritySafe';
+import React from "react";
+import styles from "./iconBox.module.css";
+import SecuritySafe from "../../assets/icons/SecuritySafe";
 
 const IconBox = ({
   title = "Safe & Secure",
@@ -11,11 +11,14 @@ const IconBox = ({
     <div className={styles["iconbox"]}>
       <h4 className={styles["iconbox-title"]}>{title}</h4>
       <p className={styles["iconbox-desc"]}>{desc}</p>
-      <span className={styles.icon} >
-        {React.cloneElement(icon, {svgClass: styles.svg, pathClass: styles.path })}
+      <span className={styles.icon}>
+        {React.cloneElement(icon, {
+          svgClass: styles.svg,
+          pathClass: styles.path,
+        })}
       </span>
     </div>
   );
 };
 
-export default IconBox
+export default IconBox;
