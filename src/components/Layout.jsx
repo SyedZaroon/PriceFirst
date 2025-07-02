@@ -8,7 +8,7 @@ const Layout = () => {
     <div className="border">
       <Header />
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

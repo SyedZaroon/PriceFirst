@@ -62,7 +62,7 @@ const Footer = () => {
                     styles["footer-body-text"],
                   ].join(" ")}
                 >
-                  <li>85 Bury Road Manchester, M8 8FX United Kingdom</li>
+                  <li>85 Bury Road Manchester, M8 8FX <br></br>United Kingdom</li>
                 </ul>
                 <ul className={[styles["footer-body-social"]].join(" ")}>
                   <li>

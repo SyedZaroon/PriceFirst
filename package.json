@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "iconsax-react": "^0.0.8",
     "iconsax-reactjs": "^0.0.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

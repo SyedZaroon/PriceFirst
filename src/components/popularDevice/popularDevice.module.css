@@ -1,28 +1,20 @@
 .popular-width{
-    margin: 32px 0px 88px 32px;
-    overflow-x: hidden;
+    margin: clamp(32px, 2vw + 32px, 72px) 32px;
+    
 }
 
 .popular-heading{
     font-weight: var(--fontw-bold);
     font-size: var(--fs-h-3);
 }
+
+
 .popular-box{
     width: fit-content;
-    overflow: hidden;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 16px;
 }
+
 .popular-component{
-    margin-top: 32px;
-
-overflow: hidden;
-
-    position: relative;
+    margin-top: clamp(24px,1vw + 16px,32px);
 }
 
 .popular-image{

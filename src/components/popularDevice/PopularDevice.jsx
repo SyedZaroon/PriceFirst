@@ -21,8 +21,8 @@ const PopularDevice = () => {
       <h2 className={styles["popular-heading"]}>Popular Devices Right Now</h2>
       <Swiper
         modules={[Navigation, Autoplay]}
-        spaceBetween={0}
-        slidesPerView={6}
+        spaceBetween={80}
+        slidesPerView={1}
         navigation={{
           nextEl: ".custom-swiper-button-next",
           prevEl: ".custom-swiper-button-prev",
@@ -30,9 +30,19 @@ const PopularDevice = () => {
         autoplay={{ delay: 3000 }}
         className={styles["popular-component"]}
         breakpoints={{
-          320: { slidesPerView: 1 },
-          640: { slidesPerView: 5 },
-          1024: { slidesPerView: 6 },
+          320: { slidesPerView: 1.1 },
+          336: { slidesPerView: 1.6 },
+          400: { slidesPerView: 1.8 },
+          450: { slidesPerView: 2 },
+          550: { slidesPerView: 2.5 },
+          600: { slidesPerView: 3 },
+          800: { slidesPerView: 3.5 },
+          900: { slidesPerView: 4 },
+          1000: { slidesPerView: 4.5 },
+          1100: { slidesPerView: 5 },
+          1200: { slidesPerView: 5.3 },
+          1220: { slidesPerView: 5.5 },
+          1300: { slidesPerView: 6 },
         }}
       >
         {a.map((value) => {
@@ -69,7 +79,13 @@ const PopularDevice = () => {
           }
         </div>
         <div className={`${styles["next-btn"]} `}>
-          {<IconButton className="custom-swiper-button-next" size="2xs" icon={<GreaterThan />} />}
+          {
+            <IconButton
+              className="custom-swiper-button-next"
+              size="2xs"
+              icon={<GreaterThan />}
+            />
+          }
         </div>
       </Swiper>
     </div>

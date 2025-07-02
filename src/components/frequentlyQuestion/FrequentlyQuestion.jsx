@@ -36,12 +36,12 @@ const FrequentlyQuestion = () => {
   return (
     <div className={styles["faq-section"]}>
       <div className={styles["faq-content"]}>
-        <h2 className={styles["faq-title"]}>
-          Frequently Asked
+        <h1 className={styles["faq-title"]}>
+          Frequently Asked<br></br>
           <span>
-            <br></br> Questions
+             Questions
           </span>
-        </h2>
+        </h1>
         <p>Still have a questions in mind?</p>
         <Button className={styles.btn} variant="primary" size="sm">
           Ask a Question

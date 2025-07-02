@@ -38,7 +38,10 @@ const OurPatner = () => {
         spaceBetween={20}
         slidesPerView={9}
         loop={true}
-        autoplay={{ delay: 2500 }}
+        speed={3000}
+         freeMode={true}
+        freeModeMomentum={false}
+        autoplay={{ delay: 0 }}
         breakpoints={{
           320: { slidesPerView: 2 },
           640: { slidesPerView: 4 },

@@ -13,12 +13,12 @@ const Home = () => {
     <div>
       <HomeBanner />
       <HowToCompare />
-      {/* <PopularDevice />
+      <PopularDevice />
       <WhyUs />
       <Trustpilot />
       <UniqueSellingPoints />
       <FrequentlyQuestion />
-      <OurPatner /> */}
+      <OurPatner />
     </div>
   );
 }

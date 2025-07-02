@@ -22,7 +22,7 @@ const WhyUs = () => {
           </div>
         </div>
 
-        <img src={pound} width="280px" height="280px" />
+        <img className={styles["img"]} src={pound} width="280px" height="280px" />
       </div>
       {/* <div className={styles["whyus-blur-shape"]}></div> */}
     </div>

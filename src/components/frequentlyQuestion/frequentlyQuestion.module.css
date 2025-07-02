@@ -1,8 +1,9 @@
 .faq-section{
-    margin: 80px 140px;
+    max-width: var(--small-box-width);
+        margin: 80px auto 0px;
 
     display: grid;
-    grid-template-columns: 380px 678px ;
+    grid-template-columns: 1fr 1fr ;
 
     justify-content: space-between;
     
@@ -23,4 +24,24 @@
 
 .btn{
     width: fit-content;
+}
+
+@media screen and (max-width:1190px) {
+   .faq-section{
+    margin: clamp(32px, 2vw + 32px, 72px) 32px;
+   }
+}
+
+@media screen and (max-width:768px) {
+    .faq-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .faq-title br{
+        display: none;
+    }
+    .faq-title span{
+        margin-left: 5px;
+    }
 }

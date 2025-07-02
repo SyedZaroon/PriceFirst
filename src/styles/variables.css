@@ -113,7 +113,8 @@
         0px 2px 5px 0px #676E7614;
 
     --box-width: clamp(398px, 90vw, 1400px);
-    --small-box-width: clamp(398px, 80vw, 1240px)
+    --small-box-width: 1160px;
+    
       
 
 

@@ -1,5 +1,6 @@
 .whyus-box{
-    margin: 80px 140px;
+    max-width: var(--small-box-width);
+        margin: 80px auto 0px;
 }
 
 .whyus-content{
@@ -35,4 +36,22 @@
                 #ffca28 60%,
                 /* Rich golden tone */
                 transparent 90%)
+}
+
+@media screen and (max-width:1190px) {
+    .whyus-box{
+        margin: clamp(32px, 2vw + 32px, 72px) 32px;
+    }
+
+    .img{
+        display: none;
+    }
+
+    .whyus{
+        display: block;
+    }
+
+    .whyus-content{
+        gap:56px
+    }
 }

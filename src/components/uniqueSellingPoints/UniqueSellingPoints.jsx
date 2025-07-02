@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./uniqueSellingPoints.module.css";
 import IconBox from "../iconBox/IconBox";
-import {
-  SecuritySafe,
-  Box,
-  Clock,
-  EyeSlash,
-  ShieldTick,
-  Verify,
-} from "iconsax-react";
+import SecuritySafe from "../../assets/icons/SecuritySafe";
+import Box from "../../assets/icons/Box";
+import Clock from "../../assets/icons/Clock";
+import EyeSlash from "../../assets/icons/EyeSlash";
+import ShieldTick from "../../assets/icons/ShieldTick";
+import Verify from "../../assets/icons/Verify";
+
+
 
 const UniqueSellingPoints = () => {
   const iconBoxData = [
