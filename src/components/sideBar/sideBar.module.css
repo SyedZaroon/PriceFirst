@@ -8,6 +8,7 @@
     padding: 20px;
     z-index: 99999;
     transition: all 0.3s ease-in-out;
+    overflow-y: scroll;
 }
 
 .close {
@@ -55,18 +56,8 @@
 
 .overlay:hover .closeFloating {
     position: fixed;
-    width: 50px;
-    height: 50px;
-    background-color: var(--color-white);
-    color: black;
-    font-size: 30px;
-    font-weight: bold;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
+    color: white;
+    display: block;
     z-index: 1000;
 }
 
@@ -74,7 +65,7 @@
     margin-top: 60px;
     display: flex;
     flex-direction: column;
-    gap:20px
+    gap:10px
 }
 
 .menu-item{
@@ -84,7 +75,7 @@
 }
 
 .menu-item:hover,
-.menu-item:has(.submenu-open) {
+.menu-item.menuopen{
     background-color: var(--color-gray-100);
     padding: 10px;
     border-radius: var(--radius-sm);
@@ -95,7 +86,7 @@
 }
 
 .menu-item:hover .arrow,
-.menu-item:has(.submenu-open) .arrow {
+.menu-item.menuopen .arrow{
     rotate: 180deg;
 }
 
@@ -103,36 +94,32 @@
     stroke: var(--color-black);
 }
 
-.iphone-menu{
-    position: relative;
-}
-.iphone-submenu{
-    position: absolute;
+.submenu{
     height: 0;
     overflow-y: auto;
     width: 100%;
-    left: 0;
-    top: 50px;
+    visibility: hidden;
     background-color: var(--color-white);  
     transition: all 0.3s ease-in-out;
 }
+.submenu-open {
+    height: 300px;
+    visibility: visible;
+}
 
-.iphone-submenu::-webkit-scrollbar {
+.submenu-close {
+    height: 0px;
+    visibility: hidden;
+}
+.scrollbar::-webkit-scrollbar {
     width: 6px;
 }
 
-.iphone-submenu::-webkit-scrollbar-track {
+.scrollbar::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.iphone-submenu::-webkit-scrollbar-thumb {
+.scrollbar::-webkit-scrollbar-thumb {
     background-color: var(--color-black);
     border-radius: 10px;
-}
-
-.iphone-submenu.submenu-open {
-   height: 300px;
-}
-.iphone-submenu.submenu-close {
-    height: 0px;
 }
