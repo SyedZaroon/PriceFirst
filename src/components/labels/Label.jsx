@@ -48,9 +48,7 @@ const Label = ({
   return (
     <div
       className={labelClasses}
-      error={error}
-      success={success}
-      warning={warning}
+  
     >
       {prefixIcon &&
         React.cloneElement(prefixIcon, { className: prefixIconClass })}

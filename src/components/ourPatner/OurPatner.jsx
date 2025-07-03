@@ -35,17 +35,19 @@ const OurPatner = () => {
     <div className={styles["partner-section"]}>
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={20}
-        slidesPerView={9}
+        spaceBetween={10}
+        slidesPerView={8}
+        speed={1500}
         loop={true}
-        speed={3000}
-         freeMode={true}
-        freeModeMomentum={false}
-        autoplay={{ delay: 0 }}
+        freeMode={true}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+        }}
         breakpoints={{
           320: { slidesPerView: 2 },
           640: { slidesPerView: 4 },
-          1024: { slidesPerView: 9 },
+          1024: { slidesPerView: 8 },
         }}
       >
         {images.map((img, index) => (

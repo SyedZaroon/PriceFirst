@@ -90,7 +90,7 @@
 
 .footer-big-logo{
     margin-top: clamp(10px, 1vw + 10px, 40px);
-    margin-bottom: clamp(-0px, 1vw -10px,  -60px);
+    margin-bottom: -60px;
         font-weight: 700;
         line-height: 200px;
         font-size: 190px;
@@ -109,6 +109,7 @@
         .footer-big-logo{
             line-height: 150px;
                 font-size: 150px;
+                margin-bottom: -40px;
         }
 
 }
@@ -121,6 +122,7 @@
         .footer-big-logo {
             line-height: 130px;
             font-size: 130px;
+            margin-bottom: -30px;
         }
 }
 
@@ -128,6 +130,7 @@
     .footer-big-logo {
             line-height: 60px;
             font-size: 50px;
+            margin-bottom: -10px;
         }
 }
 

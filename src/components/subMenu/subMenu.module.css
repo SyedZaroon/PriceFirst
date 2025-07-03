@@ -1,0 +1,76 @@
+.submenu-box-grid{
+    background-color: var(--color-white);
+    padding: 32px;
+    box-shadow: 0px 0px 10px 0px #CED2D6;
+    width: fit-content;
+    border-radius: var(--radius-xxl);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 96px;
+    row-gap: 12px;
+    border: 1px solid var(--color-gray-200);
+    position: relative;
+    z-index: 9999;
+    white-space: nowrap;
+
+}
+
+.submenu-box-grid::before{
+content: "";
+    position: absolute;
+    top: -6px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    background: var(--color-white);
+    transform: rotate(45deg);
+    border-radius: 3px;
+}
+
+.menu{
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+    color: black;
+}
+
+.menu::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    
+
+}
+
+.menu:hover::after{
+    width: 100%;
+}
+
+.submenu-box-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background-color: var(--color-gray-50);
+    padding: 10px;
+    border-radius: var(--radius-sm);
+}
+
+.submenu-box-flex .menu {
+    width: 100%;
+    padding: 10px;
+}
+
+.submenu-box-flex .menu::after {
+    display: none;
+}
+
+.submenu-box-flex .menu:hover {
+    width: 100%;
+    background-color: var(--color-gray-200);
+    border-radius: var(--radius-sm);
+}

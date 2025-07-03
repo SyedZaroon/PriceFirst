@@ -51,9 +51,10 @@ const UniqueSellingPoints = () => {
           <div className={styles["unique-content"]}>
             <h1>What Sets Us Apart</h1>
             <div className={styles["unique-grid"]}>
-              {iconBoxData.map((value) => {
+              {iconBoxData.map((value,index) => {
                 return (
                   <IconBox
+                    key={index}
                     title={value.title}
                     desc={value.desc}
                     icon={value.icon}

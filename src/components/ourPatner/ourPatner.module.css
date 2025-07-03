@@ -1,3 +1,10 @@
-.partner-section{
+.partner-section {
     margin: 48px 0px;
+}
+
+
+.partner-img {
+    height: 56px;
+    width: 175px;
+    object-fit: contain;
 }

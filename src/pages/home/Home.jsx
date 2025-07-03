@@ -7,6 +7,7 @@ import Trustpilot from '../../components/trustPilot/Trustpilot'
 import UniqueSellingPoints from '../../components/uniqueSellingPoints/UniqueSellingPoints'
 import FrequentlyQuestion from '../../components/frequentlyQuestion/FrequentlyQuestion'
 import OurPatner from '../../components/ourPatner/OurPatner'
+import SubMenu from '../../components/subMenu/SubMenu'
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
       <Trustpilot />
       <UniqueSellingPoints />
       <FrequentlyQuestion />
-      <OurPatner />
+      <OurPatner /> 
     </div>
   );
 }
