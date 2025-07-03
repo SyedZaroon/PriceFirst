@@ -5,7 +5,7 @@ import logo from "../../assets/images/PriceFirst.png";
 import { NavLink } from "react-router-dom";
 import ArrowDown from "../../assets/icons/ArrowDown";
 import SubMenu from "../subMenu/SubMenu";
-import iphoneSubmenu from '../../subMenu/menuData.js'
+import {iphoneSubmenu} from '../../subMenu/menuData.js'
 
 
 const Sidebar = ({ view = false, onClose }) => {

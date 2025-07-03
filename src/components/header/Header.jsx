@@ -7,8 +7,11 @@ import { HamburgerMenu } from 'iconsax-reactjs';
 import SubMenu from '../subMenu/SubMenu';
 import clsx from 'clsx';
 import Sidebar from '../sideBar/Sidebar';
-import iphoneSubmenu from '../../subMenu/menuData.js'
-import Label from '../labels/Label.jsx'
+import {
+  iphoneSubmenu,
+  samsungSubmenu,
+  pixelSubmenu,
+} from "../../subMenu/menuData.js";
 
 
 
@@ -18,7 +21,6 @@ const Header = () => {
 
   return (
     <>
-    
       <Sidebar view={sideBar} onClose={() => setSideBar(false)} />
       <div className={styles["header"]}>
         <img src={logo} alt="logo" width="" height="" />
@@ -36,17 +38,26 @@ const Header = () => {
               <SubMenu menu={iphoneSubmenu} type="grid" />
             </div>
           </NavLink>
-          <NavLink className={styles["menu"]} to="/">
+          <NavLink
+            className={clsx(styles["menu"], styles["samsung-menu"])}
+            to="/"
+          >
             <span>Samsung Phones</span>
             <span className={styles.arrow}>
               <ArrowDown />
             </span>
+            <div className={styles["samsung-submenu"]}>
+              <SubMenu menu={samsungSubmenu} type="grid" />
+            </div>
           </NavLink>
-          <NavLink className={styles["menu"]} to="/">
+          <NavLink className={clsx(styles["menu"], styles["pixel-menu"])} to="/">
             <span>Google Pixels</span>
             <span className={styles.arrow}>
               <ArrowDown />
             </span>
+            <div className={styles["pixel-submenu"]}>
+              <SubMenu menu={pixelSubmenu} type="grid" />
+            </div>
           </NavLink>
         </div>
 

@@ -28,4 +28,38 @@ const iphoneSubmenu = [
   "iPhone 16 Pro Max",
 ];
 
-export default iphoneSubmenu;
+const samsungSubmenu = [
+  "Galaxy S24",
+  "Galaxy S24+",
+  "Galaxy S24 Ultra",
+  "Galaxy Z Fold 6",
+  "Galaxy Z Flip 6",
+  "Galaxy A55",
+  "Galaxy A35",
+  "Galaxy M15",
+  "Galaxy M14",
+  "Galaxy F15",
+  "Galaxy S23",
+  "Galaxy S23 FE",
+  "Galaxy A14",
+  "Galaxy A05",
+  "Galaxy A04s",
+];
+
+const pixelSubmenu = [
+  "Pixel 9",
+  "Pixel 9 Pro",
+  "Pixel 9 Pro XL",
+  "Pixel 8",
+  "Pixel 8 Pro",
+  "Pixel 7a",
+  "Pixel Fold",
+  "Pixel 7",
+  "Pixel 7 Pro",
+  "Pixel 6a",
+  "Pixel 6",
+  "Pixel 6 Pro",
+  "Pixel 5",
+];
+
+export { iphoneSubmenu, samsungSubmenu, pixelSubmenu };

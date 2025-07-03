@@ -31,7 +31,12 @@ content: "";
     position: relative;
     width: fit-content;
     cursor: pointer;
-    color: black;
+    color: var(--color-gray-600);
+    font-weight: 400;
+}
+
+.menu:hover {
+    color: var(--color-black);
 }
 
 .menu::after{
@@ -74,3 +79,4 @@ content: "";
     background-color: var(--color-gray-200);
     border-radius: var(--radius-sm);
 }
+
