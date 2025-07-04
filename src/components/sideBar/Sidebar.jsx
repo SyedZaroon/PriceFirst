@@ -9,7 +9,7 @@ import {
   iphoneSubmenu,
   samsungSubmenu,
   pixelSubmenu,
-} from "../../subMenu/menuData.js";
+} from "../../data/subMenu/menuData.js";
 import { CloseCircle, CloseSquare } from "iconsax-reactjs";
 
 

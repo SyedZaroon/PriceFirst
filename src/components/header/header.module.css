@@ -3,10 +3,16 @@
     border-radius: var(--radius-2xl);
     margin: 0px 20px;
     padding: 24px 40px;
-
     display: flex;
-    align-items: center;
-    gap: 56px;
+        align-items: center;
+        justify-content: space-between;
+}
+
+.header-left{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 59px;
 }
 
 .header-logo{
@@ -23,7 +29,30 @@
     font-size: var(--fs-body-3);
 
 }
+.header3-menu,
+.header1-input,
+.header3-input{
+    display: none;
+}
 
+.header3{
+    background-color: var(--color-gray-100);
+}
+.header.header2{
+    padding: 12px 12px 12px 40px;
+}
+.header2-field{
+    padding: 16px !important;
+    background-color: var(--color-gray-900) !important;
+    border-color: transparent !important;
+    border-radius: var(--radius-full) !important ;
+}
+.header2-menu{
+    gap: 30px;
+} 
+.header2-input{
+    width: clamp(200px,40vw,600px);
+}
 .menu{
     display: flex;
     align-items: center;
@@ -43,22 +72,6 @@
 .hambruger-icon{
     display: none;
 }
-
-@media screen and (max-width:1024px) {
-    .header-menu{
-        display: none;
-    }
-
-        .hambruger-icon {
-            display: block;
-            color: var(--color-gray-400);
-        }
-
-        .header{
-            justify-content: space-between;
-        }
-}
-
 
 .iphone-submenu{
     position: absolute;
@@ -113,4 +126,36 @@
     visibility: visible;
 }
 
+@media screen and (max-width:1150px) {
+    .header-left{
+        gap: 30px;
+    }
+    
+}
 
+@media screen and (max-width:1098px) {
+    .header2-input {
+        width: 350px;
+    }
+
+}
+
+
+@media screen and (max-width:1024px) {
+    .header-menu,
+    .header2-input {
+        display: none;
+    }
+
+    .hambruger-icon {
+        display: block;
+        color: var(--color-gray-400);
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+    .header.header2{
+        padding: 24px 40px;
+    }
+}
