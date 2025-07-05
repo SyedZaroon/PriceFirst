@@ -14,7 +14,7 @@ const ArrowDown = ({ svgClass = '', pathClass = '' }) => {
         <path
           className={pathClass}
           d="M13.28 6.76379L8.9333 11.1105C8.41997 11.6238 7.57997 11.6238 7.06664 11.1105L2.71997 6.76379"
-          stroke="#E5E7EA"
+          stroke="currentColor"
           strokeWidth="1.5"
           strokeMiterlimit={10}
           strokeLinecap="round"

@@ -18,7 +18,7 @@ const HomeBanner = () => {
         <div className={[styles["banner-newsletter"]].join(" ")}>
           <InputFields
             className={styles["search-field"]}
-            type="border"
+            variant="border"
             placeholder="Search device"
             suffixIcon={<SearchIcon />}
           />

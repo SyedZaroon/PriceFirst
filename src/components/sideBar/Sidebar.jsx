@@ -10,7 +10,7 @@ import {
   samsungSubmenu,
   pixelSubmenu,
 } from "../../data/subMenu/menuData.js";
-import { CloseCircle, CloseSquare } from "iconsax-reactjs";
+import { CloseCircle } from "iconsax-reactjs";
 
 
 const Sidebar = ({ view = false, onClose }) => {
@@ -67,7 +67,10 @@ const Sidebar = ({ view = false, onClose }) => {
       {view && (
         <div
           className={styles.overlay}
-          onClick={() => { onClose(); dispatch({type:"RESET"})}}
+          onClick={() => {
+            onClose();
+            dispatch({ type: "RESET" });
+          }}
           onMouseMove={mousePosition}
         >
           <div
@@ -81,26 +84,33 @@ const Sidebar = ({ view = false, onClose }) => {
 
       <div className={clsx(styles.sidebar, view ? styles.open : styles.close)}>
         <div className={styles["sidebar-header"]}>
-          <img src={logo} alt="logo" width="" height="" />
-          <span onClick={()=>{onClose(); dispatch({type:"RESET"})}} className={styles["close-btn"]}>
+          <NavLink to="/">
+            <img src={logo} alt="logo" width="" height="" />
+          </NavLink>
+          <span
+            onClick={() => {
+              onClose();
+              dispatch({ type: "RESET" });
+            }}
+            className={styles["close-btn"]}
+          >
             <CloseCircle />
           </span>
         </div>
 
         <div className={styles["sidebar-menu"]}>
-          <NavLink
+          <p
             className={clsx(
               styles["menu-item"],
               subMenu.iphone ? styles["menuopen"] : styles["menuclose"]
             )}
-            to="/"
             onClick={() => dispatch({ type: "OPEN_ONLY", payload: "iphone" })}
           >
             <span className={styles["iphone"]}>iPhone</span>
             <span className={styles.arrow}>
               <ArrowDown pathClass={styles["arrow-path"]} />
             </span>
-          </NavLink>
+          </p>
           <div
             className={clsx(
               styles["submenu"],
@@ -108,21 +118,20 @@ const Sidebar = ({ view = false, onClose }) => {
               styles["scrollbar"]
             )}
           >
-            <SubMenu menu={iphoneSubmenu} type="flex" />
+            <SubMenu brand="iphone" menu={iphoneSubmenu} type="flex" />
           </div>
-          <NavLink
+          <p
             className={clsx(
               styles["menu-item"],
               subMenu.samsung ? styles["menuopen"] : styles["menuclose"]
             )}
-            to="/"
             onClick={() => dispatch({ type: "OPEN_ONLY", payload: "samsung" })}
           >
             <span>Samsung Phones</span>
             <span className={styles.arrow}>
               <ArrowDown pathClass={styles["arrow-path"]} />
             </span>
-          </NavLink>
+          </p>
           <div
             className={clsx(
               styles["submenu"],
@@ -132,21 +141,20 @@ const Sidebar = ({ view = false, onClose }) => {
               styles["scrollbar"]
             )}
           >
-            <SubMenu menu={samsungSubmenu} type="flex" />
+            <SubMenu brand="samsung" menu={samsungSubmenu} type="flex" />
           </div>
-          <NavLink
+          <p
             className={clsx(
               styles["menu-item"],
               subMenu.pixel ? styles["menuopen"] : styles["menuclose"]
             )}
-            to="/"
             onClick={() => dispatch({ type: "OPEN_ONLY", payload: "pixel" })}
           >
             <span>Google Pixels</span>
             <span className={styles.arrow}>
               <ArrowDown pathClass={styles["arrow-path"]} />
             </span>
-          </NavLink>
+          </p>
           <div
             className={clsx(
               styles["submenu"],
@@ -154,7 +162,7 @@ const Sidebar = ({ view = false, onClose }) => {
               styles["scrollbar"]
             )}
           >
-            <SubMenu menu={pixelSubmenu} type="flex" />
+            <SubMenu brand="google-pixel" menu={pixelSubmenu} type="flex" />
           </div>
         </div>
       </div>

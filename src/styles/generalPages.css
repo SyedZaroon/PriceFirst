@@ -1,0 +1,51 @@
+.generalmain-page{
+
+    margin: 60px 254px 60px 56px;
+
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.generalPage-heading{
+    font-size: var(--fs-h-3);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.page-desc{
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-desc-bold{
+    color: var(--color-gray-1000) !important;
+    line-height: 150%;
+}
+
+.page-desc-list{
+    list-style-type: disc;
+    color: var(--color-gray-600);
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page-desc-bold-text{
+    color: var(--color-gray-900);
+    font-weight: 700;
+}
+.page-desc-normal-text{
+    color: var(--color-gray-600);
+}
+
+@media screen and (max-width:1024px) {
+    .generalmain-page{
+        flex-direction: column;
+        margin: 30px 30px 56px 30px;
+        gap: 32px;
+    }
+}

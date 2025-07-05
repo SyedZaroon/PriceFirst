@@ -4,7 +4,7 @@ import styles from "./inputfields.module.css";
 const InputFields = ({
   label = "",
   errormessage = "Error message",
-  type = "",
+  variant = "",
   className = "",
   placeholder = "Value",
   disabled = false,
@@ -12,6 +12,7 @@ const InputFields = ({
   success = false,
   prefixIcon = null,
   suffixIcon = null,
+  type=""
 }) => {
   const inputClasses = [
     styles["input-field"],
@@ -26,9 +27,9 @@ const InputFields = ({
     suffixIcon ? styles["suffixIcon-box"] : "",
     error ? styles["input-error"] : "",
     success ? styles["input-success"] : "",
-    styles[`input-field-${type}`],
-    disabled ? styles[`disabled-${type}`] : "",
-    type === "text" ? styles["text-field"] : "",
+    styles[`input-field-${variant}`],
+    disabled ? styles[`disabled-${variant}`] : "",
+    variant === "text" ? styles["text-field"] : "",
     className,
   ]
     .filter(Boolean)
@@ -45,10 +46,11 @@ const InputFields = ({
 
         <input
           className={inputClasses}
-          type={type}
+          variant={variant}
           error="error"
           placeholder={placeholder}
           disabled={disabled}
+          type={type}
         />
 
         {suffixIcon && (

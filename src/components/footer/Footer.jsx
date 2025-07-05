@@ -21,7 +21,7 @@ const Footer = () => {
               <div className={styles["footer-input"]}>
                 <InputFields
                   placeholder="Enter Your Email"
-                  type="underline"
+                  variant="underline"
                   prefixIcon={<Sms />}
                   suffixIcon={
                     <IconButton
@@ -43,13 +43,13 @@ const Footer = () => {
                   ].join(" ")}
                 >
                   <li>
-                    <NavLink to="/">Contact Us</NavLink>
+                    <NavLink to="contact-us">Contact Us</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/">Privacy Policy</NavLink>
+                    <NavLink to="privacy-policy">Privacy Policy</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/">Terms & Condition</NavLink>
+                    <NavLink to="terms-conditions">Terms & Condition</NavLink>
                   </li>
                 </ul>
               </div>

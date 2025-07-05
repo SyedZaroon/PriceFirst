@@ -2,8 +2,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./styles/reset.css";
 import "./styles/variables.css";
 import "./styles/base.css";
+import "./styles/generalPages.css"
 import Layout from "./components/Layout";
 import Home from "./pages/home/Home";
+import OfferPage from "./pages/offerPage/OfferPage"
+import ContactUs from "./pages/contactPage/ContactUs"
+import Privacy from "./pages/privacyPage/Privacy";
+import Terms from "./pages/terms/Terms";
+import Error from "./pages/errorPage/Error";
+import AboutPage from "./pages/aboutPage/AboutPage";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +20,34 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: ":brand/:model",
+        element: <OfferPage />,
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs />,
+      },
+      {
+        path: "/privacy-policy",
+        element: <Privacy />,
+      },
+      {
+        path: "/terms-conditions",
+        element: <Terms />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutPage />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutPage />,
+      },
+      {
+        path: "*",
+        element: <Error />,
       },
     ],
   },

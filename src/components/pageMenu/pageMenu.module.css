@@ -1,0 +1,90 @@
+.menu{
+    width: fit-content;
+}
+.desktop-menu{
+    color: var(--color-gray-500);
+    border: 2px solid transparent;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.icon {
+    display: none;
+    
+}
+
+.desktop-menu:hover,
+.desktop-menu.active {
+    border-left: 2px solid var(--color-accent-700);
+    color: var(--color-black);
+    font-weight: 600;
+}
+.desktop-menu:hover .icon,
+.desktop-menu.active .icon {
+    display: block;
+    
+}
+
+.text{
+    width: 150px;
+}
+
+.menu-text{
+    display: flex;
+}
+
+
+
+.mobile-menu{
+    margin: 100px;
+    display: flex;
+    justify-content: space-between;
+color: var(--color-gray-600);
+border-radius: var(--radius-full);
+}
+
+.select-wrapper {
+    display: none;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-gray-300);
+    cursor: pointer;
+}
+
+.select:focus {
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-black);
+    outline: none;
+    box-shadow: none;
+}
+
+.arrow-icon{
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
+}
+
+
+@media screen and (max-width:1024px) {
+    .menu{
+        display: none;
+    }
+
+    .select-wrapper{
+        display: block;
+        width: 100%;
+    }
+}
+

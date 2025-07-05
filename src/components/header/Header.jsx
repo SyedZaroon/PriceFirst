@@ -19,7 +19,7 @@ import {
 
 
 const Header = ({
-  variant = "header3"
+  variant = "header1"
 }) => {
 
   const [sideBar , setSideBar] = useState(false)
@@ -30,54 +30,49 @@ const Header = ({
       <div className={clsx(styles["header"], styles[`${variant}`])}>
         <div className={styles["header-left"]}>
           {variant !== "header3" ? (
-            <img src={logo} alt="logo" width="" height="" />
+            <NavLink to="/">
+              <img src={logo} alt="logo" width="" height="" />
+            </NavLink>
           ) : (
-            <img src={blacklogo} alt="logo" width="" height="" />
+            <NavLink to="/">
+              <img src={blacklogo} alt="logo" width="" height="" />
+            </NavLink>
           )}
 
           <div
             className={clsx(styles["header-menu"], styles[`${variant}-menu`])}
           >
-            <NavLink
-              className={clsx(styles["menu"], styles["iphone-menu"])}
-              to="/"
-            >
+            <p className={clsx(styles["menu"], styles["iphone-menu"])}>
               <span className={styles["iphone"]}>iPhone</span>
               <span className={styles.arrow}>
                 <ArrowDown />
               </span>
               <div className={styles["iphone-submenu"]}>
-                <SubMenu menu={iphoneSubmenu} type="grid" />
+                <SubMenu brand='iphone' menu={iphoneSubmenu} type="grid" />
               </div>
-            </NavLink>
-            <NavLink
-              className={clsx(styles["menu"], styles["samsung-menu"])}
-              to="/"
-            >
+            </p>
+            <p className={clsx(styles["menu"], styles["samsung-menu"])}>
               <span>Samsung Phones</span>
               <span className={styles.arrow}>
                 <ArrowDown />
               </span>
               <div className={styles["samsung-submenu"]}>
-                <SubMenu menu={samsungSubmenu} type="grid" />
+                <SubMenu brand='samsung' menu={samsungSubmenu} type="grid" />
               </div>
-            </NavLink>
-            <NavLink
-              className={clsx(styles["menu"], styles["pixel-menu"])}
-              to="/"
-            >
+            </p>
+            <p className={clsx(styles["menu"], styles["pixel-menu"])}>
               <span>Google Pixels</span>
               <span className={styles.arrow}>
                 <ArrowDown />
               </span>
               <div className={styles["pixel-submenu"]}>
-                <SubMenu menu={pixelSubmenu} type="grid" />
+                <SubMenu brand='google-pixel' menu={pixelSubmenu} type="grid" />
               </div>
-            </NavLink>
+            </p>
           </div>
         </div>
 
-        <div>
+        <div className={styles[`${variant}-hamburger`]}>
           <HamburgerMenu
             size="32"
             className={styles["hambruger-icon"]}
@@ -86,10 +81,10 @@ const Header = ({
             }}
           />
         </div>
-        <div className={styles[`${variant}-input`]} >
+        <div className={styles[`${variant}-input`]}>
           <Inputfield
             className={styles[`${variant}-field`]}
-            type="border"
+            variant="border"
             placeholder="Search devices"
             prefixIcon={<SearchIcon />}
           />
