@@ -41,7 +41,7 @@ const PrivacyPolicy = () => {
             <p className="page-desc-bold-text">
               <b>1. What We Collect</b>
             </p>
-            <p className="page-desc-normal-text">
+            <div className="page-desc-normal-text">
               <ul className="page-desc-list">
                 <li>
                   Name, email, and contact number (when you submit a form or
@@ -51,19 +51,19 @@ const PrivacyPolicy = () => {
                   Device and location information (for service personalization)
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
           <div>
             <p className="page-desc-bold-text">
               <b>2. How We Use Your Data</b>
             </p>
-            <p className="page-desc-normal-text">
+            <div className="page-desc-normal-text">
               <ul className="page-desc-list">
                 <li>To process your order and send confirmation emails</li>
                 <li>To show relevant offers and improve your experience</li>
                 <li>For customer support and follow-up communication</li>
               </ul>
-            </p>
+            </div>
           </div>
 
           {policy.map((item, index) => (

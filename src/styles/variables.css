@@ -114,6 +114,7 @@
 
     --box-width: clamp(398px, 90vw, 1400px);
     --small-box-width: 1160px;
+    --xs-box-width:960px;
     
       
 

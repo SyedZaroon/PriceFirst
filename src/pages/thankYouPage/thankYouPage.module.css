@@ -1,0 +1,10 @@
+.thankyou-box{
+    max-width: var(--xs-box-width);
+    margin: 56px auto 160px;
+}
+
+.thankyou-heading{
+    font-size: var(--fs-h-3);
+    font-weight: 700;
+}
+

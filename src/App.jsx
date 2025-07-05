@@ -11,6 +11,7 @@ import Privacy from "./pages/privacyPage/Privacy";
 import Terms from "./pages/terms/Terms";
 import Error from "./pages/errorPage/Error";
 import AboutPage from "./pages/aboutPage/AboutPage";
+import ThankYouPage from "./pages/thankYouPage/ThankYouPage";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/about-us",
         element: <AboutPage />,
+      },
+      {
+        path: "/thankyou",
+        element: <ThankYouPage />,
       },
       {
         path: "/about-us",

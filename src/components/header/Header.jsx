@@ -42,7 +42,7 @@ const Header = ({
           <div
             className={clsx(styles["header-menu"], styles[`${variant}-menu`])}
           >
-            <p className={clsx(styles["menu"], styles["iphone-menu"])}>
+            <div className={clsx(styles["menu"], styles["iphone-menu"])}>
               <span className={styles["iphone"]}>iPhone</span>
               <span className={styles.arrow}>
                 <ArrowDown />
@@ -50,8 +50,8 @@ const Header = ({
               <div className={styles["iphone-submenu"]}>
                 <SubMenu brand='iphone' menu={iphoneSubmenu} type="grid" />
               </div>
-            </p>
-            <p className={clsx(styles["menu"], styles["samsung-menu"])}>
+            </div>
+            <div className={clsx(styles["menu"], styles["samsung-menu"])}>
               <span>Samsung Phones</span>
               <span className={styles.arrow}>
                 <ArrowDown />
@@ -59,8 +59,8 @@ const Header = ({
               <div className={styles["samsung-submenu"]}>
                 <SubMenu brand='samsung' menu={samsungSubmenu} type="grid" />
               </div>
-            </p>
-            <p className={clsx(styles["menu"], styles["pixel-menu"])}>
+            </div>
+            <div className={clsx(styles["menu"], styles["pixel-menu"])}>
               <span>Google Pixels</span>
               <span className={styles.arrow}>
                 <ArrowDown />
@@ -68,7 +68,7 @@ const Header = ({
               <div className={styles["pixel-submenu"]}>
                 <SubMenu brand='google-pixel' menu={pixelSubmenu} type="grid" />
               </div>
-            </p>
+            </div>
           </div>
         </div>
 
