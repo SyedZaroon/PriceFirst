@@ -8,3 +8,33 @@
     font-weight: 700;
 }
 
+.order-details{
+    margin-top: 32px;
+}
+.icon-box{
+    margin-top: 24px;
+}
+.next-step{
+    margin-top: 64px;
+}
+.order-confirmation{
+    margin-top: 56px;
+}
+
+@media screen and (max-width:1024px) {
+    .thankyou-box{
+        padding: 0px 28px;
+    }
+}
+
+@media screen and (max-width:650px) {
+
+    
+        .next-step {
+            margin-top: 32px;
+        }
+    
+        .order-confirmation {
+            margin-top: 48px;
+        }
+}

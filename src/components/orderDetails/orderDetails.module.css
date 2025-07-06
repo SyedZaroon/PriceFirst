@@ -58,7 +58,8 @@
 @media screen and (max-width:800px) {
     .order-details-box {
         grid-template-columns: 1fr 1fr;
-        justify-items:center
+        justify-items:center;
+        
     }
 
         .DesktopHide {
