@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useId } from "react";
 import styles from "./inputfields.module.css";
+import clsx from "clsx";
 
 const InputFields = ({
+  children,
   label = "",
   errormessage = "Error message",
   variant = "",
@@ -12,7 +14,9 @@ const InputFields = ({
   success = false,
   prefixIcon = null,
   suffixIcon = null,
-  type=""
+  type = "",
+  name = "",
+  value=""
 }) => {
   const inputClasses = [
     styles["input-field"],
@@ -22,6 +26,7 @@ const InputFields = ({
     .join(" ");
 
   const iconWrapperClasses = [
+    clsx(
     styles["input-field"],
     prefixIcon ? styles["prefixIcon-box"] : "",
     suffixIcon ? styles["suffixIcon-box"] : "",
@@ -30,13 +35,14 @@ const InputFields = ({
     styles[`input-field-${variant}`],
     disabled ? styles[`disabled-${variant}`] : "",
     variant === "text" ? styles["text-field"] : "",
-    className,
+    className,)
   ]
-    .filter(Boolean)
-    .join(" ");
+  
+  const id = useId();
+  const inputId = `${id}-${name}`
 
   return (
-    <div className={styles["input-box"]}>
+    <label className={styles["input-box"]}>
       {label && <span className={styles["input-label"]}>{label}</span>}
 
       <div className={iconWrapperClasses}>
@@ -44,33 +50,55 @@ const InputFields = ({
           <span className={styles["prefix-icon"]}>{prefixIcon}</span>
         )}
 
-        <input
-          className={inputClasses}
-          variant={variant}
-          error="error"
-          placeholder={placeholder}
-          disabled={disabled}
-          type={type}
-        />
+        {type === "radio" ? (
+          <>
+            <input
+              className={styles["radio-box"]}
+              variant={variant}
+              error="error"
+              placeholder={placeholder}
+              disabled={disabled}
+              type="radio"
+              name={name}
+              value={value}
+              id={inputId}
+            />
+            <span className={styles["radio"]}></span>
+            {children}
+          </>
+        ) : (
+          <input
+            id={inputId}
+            className={inputClasses}
+            variant={variant}
+            error="error"
+            placeholder={placeholder}
+            disabled={disabled}
+            type={type}
+            name={name}
+            value={value}
+          />
+        )}
 
         {suffixIcon && (
           <span
             className={[
               styles["suffix-icon"],
               error && styles["error-icon"],
-              success && styles["success-icon"], 
+              success && styles["success-icon"],
             ]
               .filter(Boolean)
               .join(" ")}
           >
-            {React.isValidElement(suffixIcon)? React.cloneElement(suffixIcon, {disabled}): suffixIcon}
+            {React.isValidElement(suffixIcon)
+              ? React.cloneElement(suffixIcon, { disabled })
+              : suffixIcon}
           </span>
         )}
-
       </div>
 
       {error && <span className={styles["input-label"]}>{errormessage}</span>}
-    </div>
+    </label>
   );
 };
 

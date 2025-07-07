@@ -1,0 +1,42 @@
+.checkout-form{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.form-title{
+    font-size: var(--fs-h-4);
+    font-weight: 700;
+}
+
+.fields-group{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.row-flex-field{
+    display: flex;
+    gap: 12px;
+}
+
+.checout-field{
+    padding: 12px;
+}
+
+.radio-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.radio-heading {
+    font-size: var(--fs-body-3);
+    font-weight: 500;
+}
+
+.radio-desc{
+    font-size: var(--fs-body-4);
+    margin-top: 6px;
+    color: var(--color-gray-500);
+}

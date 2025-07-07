@@ -16,7 +16,7 @@ const OrderConfirmation = () => {
         <div>
           <h4 className={styles.title}>Order confirmation</h4>
           <p className={styles["desc"]}>
-            You will shortly receive an email from Price First confirming your
+            You will shortly receive an email from Price First confirming your
             order number.
           </p>
         </div>
@@ -30,7 +30,7 @@ const OrderConfirmation = () => {
           <h4 className={styles.title}>Send Your Device</h4>
           <p className={styles["desc"]}>
             Use the postage label included in your confirmation email, and your
-            own packaging to send your device to Price First.
+            own packaging to send your device to Price First.
           </p>
         </div>
       </div>

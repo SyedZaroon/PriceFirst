@@ -28,7 +28,8 @@ const OrderDetails = () => {
     );
 
 
-    return (
+  return (
+    <div className={styles["container-wrapper"]} >
       <div className={styles["order-details-box"]}>
         <div
           className={(clsx(styles["device-details-box"]), styles["grid-flex"])}
@@ -67,7 +68,7 @@ const OrderDetails = () => {
         <div
           className={clsx(styles["selling-details-box"], styles["grid-flex"])}
         >
-          <div className={clsx(styles["grid-flex"],styles["sellig"])}>
+          <div className={clsx(styles["grid-flex"], styles["sellig"])}>
             <p className={styles["order-heading"]}>Selling To</p>
 
             <div
@@ -103,7 +104,8 @@ const OrderDetails = () => {
           {orderPrice}
         </div>
       </div>
-    );
+    </div>
+  );
 }
 
 export default OrderDetails

@@ -8,18 +8,21 @@
     display: flex;
     flex-direction: column;
 }
+.desktop-menu:hover {
+color: var(--color-black);
+}
 .icon {
     display: none;
     
 }
 
-.desktop-menu:hover,
 .desktop-menu.active {
     border-left: 2px solid var(--color-accent-700);
     color: var(--color-black);
     font-weight: 600;
+    background-color: var(--color-gray-50);
+    border-radius: 0px var(--radius-sm) var(--radius-sm) 0px;
 }
-.desktop-menu:hover .icon,
 .desktop-menu.active .icon {
     display: block;
     
