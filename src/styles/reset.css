@@ -24,4 +24,5 @@ button {
     all: unset;
     display: inline-block;
     cursor: pointer;
+    box-sizing: border-box;
 }

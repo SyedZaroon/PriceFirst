@@ -40,3 +40,9 @@
     margin-top: 6px;
     color: var(--color-gray-500);
 }
+
+@media screen and (max-width:620px) {
+    .row-flex-field {
+            flex-direction: column;
+        }
+}

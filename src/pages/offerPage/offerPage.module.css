@@ -1,0 +1,136 @@
+.wdthbox {
+    max-width: var(--small-box-width);
+    margin: auto;
+}
+
+.offer-box {
+    margin: 32px auto;
+}
+
+.slug {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.slug span:nth-child(even) {
+    rotate: -90deg;
+}
+
+.slug span {
+    font-size: var(--fs-body-3);
+    font-weight: 500;
+}
+
+.slug span:not(:last-child) {
+    color: var(--color-gray-400)
+}
+
+.variant-picker-box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.order-details-box {
+    background-color: var(--color-gray-50);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-gray-200);
+    padding: 16px;
+    height: fit-content;
+}
+
+.selling {
+    margin-top: 16px;
+    display: flex;
+    gap: 29px;
+    align-items: center;
+}
+
+.order-price {
+    font-size: var(--fs-h-3);
+    font-weight: 700;
+}
+
+.sell-btn {
+    margin-top: 16px;
+    width: 100%;
+    background-color: var(--color-accent-700);
+    color: var(--color-black);
+    border-color: transparent;
+}
+
+.sell-btn:hover {
+    background-color: var(--color-accent-500);
+
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-gray-200);
+}
+
+.order-box {
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.order-highlight {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.order-highlight p:nth-child(1) {
+    font-size: var(--fs-body-3);
+    font-weight: 700;
+}
+
+.order-highlight p:nth-child(2) {
+    font-size: var(--fs-body-3);
+    font-weight: 400;
+    color: var(--color-gray-600);
+}
+
+@media screen and (max-width:1200px) {
+
+    .offer-box,
+    .product-offer-box {
+        padding: 0px 28px;
+    }
+
+
+}
+
+@media screen and (max-width:1159px) {
+    .selling {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .selling {
+        gap: 0px;
+    }
+}
+
+@media screen and (max-width:852px) {
+    .order-highlight{
+        display: none;
+    }
+        .variant-picker-box{
+            flex-wrap: nowrap;
+            gap: 0px;
+        }
+}
+
+@media screen and (max-width:669px) {
+    .selling{
+        flex-wrap: wrap;
+    }
+} 

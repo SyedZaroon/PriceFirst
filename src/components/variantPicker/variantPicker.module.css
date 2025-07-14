@@ -1,0 +1,42 @@
+.img-box{
+    background-color: var(--color-gray-50);
+    border-radius: var(--radius-xl);
+    padding: 20px;
+    width: fit-content;
+}
+.variant-box{
+    display: flex;
+    gap: 12px;
+}
+
+.product-title{
+    font-weight: 700;
+}
+
+.variant-picker{
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.variant-title{
+    font-size: var(--fs-body-2);
+    font-weight: 600;
+}
+
+.variant-group{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.variant-options{
+    display: flex;
+    gap: 5px;
+}
+
+@media screen and (max-width:1000px) {
+    .variant-box,
+    .variant-options {
+        flex-wrap: wrap;
+    }
+}

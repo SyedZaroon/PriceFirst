@@ -2,6 +2,10 @@ const slugify = (slug) => {
   return (slug.toLowerCase().replace(/\s+/g,"-"))
 }
 
+const menu = ["iphone", "samsung", "google pixel"];
+const mainMenu = menu.map((value) => slugify(value));
+
+
 const createSubmenu = (arr) =>
   arr.map((value, index) => ({
     modelId: index,
@@ -124,4 +128,4 @@ const pixelSubmenu = createSubmenu([
 ]);
 
 
-export { iphoneSubmenu, samsungSubmenu, pixelSubmenu };
+export { iphoneSubmenu, samsungSubmenu, pixelSubmenu, mainMenu };
