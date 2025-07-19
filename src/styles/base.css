@@ -22,7 +22,7 @@ li {
 
 h1 {
     font-size: var(--fs-h-1);
-    /* 48px */
+    font-weight: 700;
 }
 
 h2 {

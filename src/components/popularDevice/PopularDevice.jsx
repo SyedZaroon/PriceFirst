@@ -7,11 +7,11 @@ import IconButton from '../iconButton/IconButton'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
-// Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import GreaterThan from '../../assets/icons/GreaterThan'
 import LessThan from "../../assets/icons/LessThan";
+import { NavLink } from 'react-router-dom'
 
 
 const PopularDevice = () => {
@@ -48,24 +48,26 @@ const PopularDevice = () => {
         {a.map((value) => {
           return (
             <SwiperSlide key={value}>
-              <div className={styles["popular-box"]}>
-                <div className={styles["popular-image"]}>
-                  <img src={iphone} width="148px" />
-                  <Label
-                    size="md"
-                    className={styles["popualr-label"]}
-                    success={true}
-                    text="popular"
-                  />
+              <NavLink to="/iphone/iphone-16-pro-max" >
+                <div className={styles["popular-box"]}>
+                  <div className={styles["popular-image"]}>
+                    <img src={iphone} width="148px" />
+                    <Label
+                      size="md"
+                      className={styles["popualr-label"]}
+                      success={true}
+                      text="popular"
+                    />
+                  </div>
+                  <div className={styles["popular-content"]}>
+                    <p className={styles["popular-title"]}>iPhone 16 Pro Max</p>
+                    <p className={styles["popular-price"]}>
+                      <span>upto </span>
+                      <span className={styles["price"]}> £147</span>
+                    </p>
+                  </div>
                 </div>
-                <div className={styles["popular-content"]}>
-                  <p className={styles["popular-title"]}>iPhone 16 Pro Max</p>
-                  <p className={styles["popular-price"]}>
-                    <span>upto </span>
-                    <span className={styles["price"]}> £147</span>
-                  </p>
-                </div>
-              </div>
+              </NavLink>
             </SwiperSlide>
           );
         })}

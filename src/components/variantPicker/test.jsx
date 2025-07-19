@@ -1,9 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import image from "@/assets/images/iphone.png";
 import styles from "./variantPicker.module.css";
 import Button from "../button/Button";
 import { InfoCircle } from "iconsax-reactjs";
 import { useSearchParams } from "react-router-dom";
+
+const VariantPicker = ({ model = "" }) => {
+  const modelName = model.replace(/-/g, " ");
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const [selectedOptions, setSelectedOptions] = useState({
+    storage: "",
+    condition: "",
+    network: "",
+  });
+
+  // Initialize state from URL params
+  useEffect(() => {
+    const storage = searchParams.get("storage") || "";
+    const condition = searchParams.get("condition") || "";
+    const network = searchParams.get("network") || "";
+
+    setSelectedOptions({ storage, condition, network });
+  }, []);
 
   const variant = [
     {
@@ -23,50 +43,26 @@ import { useSearchParams } from "react-router-dom";
     },
   ];
 
-const VariantPicker = ({ model = "" }) => {
-  const modelName = model.replace(/-/g, " ");
-
-  const [selectedOptions, setSelectedOptions] = useState({
-    storage: "",
-    condition: "",
-    network: "",
-  });
-
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  const setVariant = (value, key) => {
+  // Handle variant selection
+  const setVariant = (key, optionValue) => {
+    // Update component state
     setSelectedOptions((prev) => ({
       ...prev,
-      [key]: value,
+      [key]: optionValue,
     }));
 
-    setSearchParams((pre) => {
-      const newParams = new URLSearchParams(pre);
-      newParams.set(key, value);
+    // Update search params in URL
+    setSearchParams((prevParams) => {
+      const newParams = new URLSearchParams(prevParams);
+      newParams.set(key, optionValue);
       return newParams;
     });
   };
 
- useEffect(() => {
-   const resetOptions = {};
-   variant.forEach((v) => {
-     resetOptions[v.key] = "";
-   });
-   setSelectedOptions(resetOptions);
-
-   const newParams = new URLSearchParams(searchParams);
-   variant.forEach((v) => {
-     newParams.delete(v.key);
-   });
-   setSearchParams(newParams);
- }, [model]);
-
-  
-
   return (
     <div className={styles["variant-box"]}>
       <div className={styles["img-box"]}>
-        <img src={image} width="223px" height="280px" />
+        <img src={image} width="223px" height="280px" alt="Phone" />
       </div>
       <div>
         <h3 className={styles["product-title"]}>Sell My {modelName}</h3>
@@ -87,18 +83,14 @@ const VariantPicker = ({ model = "" }) => {
                 </h4>
                 <div className={styles["variant-options"]}>
                   {variantItem.options.map((optionValue, optionIndex) => {
+                    const isSelected =
+                      selectedOptions[variantItem.key] === optionValue;
                     return (
                       <Button
-                        onClick={() => {
-                          setVariant(optionValue, variantItem.key);
-                        }}
                         key={optionIndex}
                         size="sm"
-                        variant={
-                          selectedOptions[variantItem.key] === optionValue
-                            ? "primary"
-                            : "secondary"
-                        }
+                        variant={isSelected ? "primary" : "secondary"}
+                        onClick={() => setVariant(variantItem.key, optionValue)}
                       >
                         {optionValue}
                       </Button>

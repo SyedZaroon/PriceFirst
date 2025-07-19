@@ -6,10 +6,21 @@ import styles from "./checkoutForm.module.css";
 import Button from "../button/Button"
 import Bank from '../../assets/icons/Bank';
 import Paypal from '../../assets/icons/Paypal';
+import ThankYou from '../../pages/thankYouPage/ThankYouPage'
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const CheckoutForm = () => {
+
+  const navigate = useNavigate();
+  
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/ThankYou");
+  }
+
   return (
-    <form className={styles["checkout-form"]}>
+    <form onSubmit={handleSubmit} className={styles["checkout-form"]}>
       <div>
         <h4 className={styles["form-title"]}>Enter Your Details</h4>
 
@@ -181,7 +192,7 @@ const CheckoutForm = () => {
           </InputFields>
         </div>
       </div>
-      <Button size="md" variant="primary" type="submit">
+      <Button   size="md" variant="primary" type="submit">
         Complete Your Order
       </Button>
     </form>

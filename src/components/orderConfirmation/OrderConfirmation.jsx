@@ -3,6 +3,7 @@ import styles from './orderConfirmation.module.css'
 import SmsNotification from '@/assets/icons/SmsNotification.jsx'
 import Truck from "@/assets/icons/Truck.jsx";
 import WalletCheck from "@/assets/icons/WalletCheck.jsx";
+import MoveRight from '@/assets/images/MoveRight.png'
 import clsx from 'clsx';
 
 const OrderConfirmation = () => {
@@ -46,6 +47,8 @@ const OrderConfirmation = () => {
           </p>
         </div>
       </div>
+      <img src={MoveRight} className={styles["move-rigth-1"]} />
+      <img src={MoveRight} className={styles["move-rigth-2"]} />
     </div>
   );
 }

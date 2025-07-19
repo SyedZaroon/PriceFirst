@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./offerPage.module.css";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import ArrowDown from "../../assets/icons/ArrowDown";
 import {
   iphoneSubmenu,
@@ -22,8 +22,6 @@ const brandMenu = [...mainMenu]
 
 const OfferPage = () => {
   const { brand, model } = useParams();
-
-  console.log(brandMenu);
   
 
   const isValidBrand = brandMenu.some((items) => items === brand);
@@ -49,7 +47,6 @@ const isValidModel = menu.some((items) => items.slug === model);
         </div>
 
         <div className={styles["variant-picker-box"]}>
-          
           <VariantPicker model={model} />
 
           <div className={styles["order-box"]}>
@@ -61,13 +58,15 @@ const isValidModel = menu.some((items) => items.slug === model);
                   <p className={"order-price"}>£2,220.00</p>
                 </div>
                 <div style={{ width: "100%" }}>
-                  <Button
-                    className={styles["sell-btn"]}
-                    size="md"
-                    variant="primary"
-                  >
-                    Sell Now
-                  </Button>
+                  <NavLink to="/checkout" >
+                    <Button
+                      className={styles["sell-btn"]}
+                      size="md"
+                      variant="primary"
+                    >
+                      Sell Now
+                    </Button>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -88,7 +87,6 @@ const isValidModel = menu.some((items) => items.slug === model);
               </p>
             </div>
           </div>
-          
         </div>
       </div>
 

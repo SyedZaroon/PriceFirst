@@ -41,9 +41,9 @@ const Label = ({
     .filter(Boolean)
     .join(" ");
 
-  const prefixIconClass = [styles.prefixIcon].filter(Boolean).join(" ");
+  const prefixIconClass = [styles.prefixIcon];
 
-  const suffixIconClass = [styles.suffixIcon].filter(Boolean).join(" ");
+  const suffixIconClass = [styles.suffixIcon];
 
   return (
     <div
