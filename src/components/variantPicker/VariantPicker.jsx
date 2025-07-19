@@ -1,29 +1,66 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import image from "@/assets/images/iphone.png";
 import styles from "./variantPicker.module.css";
 import Button from "../button/Button";
 import { InfoCircle } from "iconsax-reactjs";
 import { useSearchParams } from "react-router-dom";
 
-const VariantPicker = ({ model = "" }) => {
-  const modelName = model.replace(/-/g, " ");
-
   const variant = [
     {
+      key: "storage",
       variantTitle: "Storage",
       options: ["256 GB", "512 GB", "1 TB"],
     },
     {
+      key: "condition",
       variantTitle: "Condition",
       options: ["Brand New", "Excellent", "Good", "Faulty"],
     },
     {
+      key: "network",
       variantTitle: "Network",
       options: ["Unlocked", "Three", "Vodaone", "O2", "EE"],
     },
   ];
 
+const VariantPicker = ({ model = "" }) => {
+  const modelName = model.replace(/-/g, " ");
+
+  const [selectedOptions, setSelectedOptions] = useState({
+    storage: "",
+    condition: "",
+    network: "",
+  });
+
   const [searchParams, setSearchParams] = useSearchParams();
+
+  const setVariant = (value, key) => {
+    setSelectedOptions((prev) => ({
+      ...prev,
+      [key]: value,
+    }));
+
+    setSearchParams((pre) => {
+      const newParams = new URLSearchParams(pre);
+      newParams.set(key, value);
+      return newParams;
+    });
+  };
+
+ useEffect(() => {
+   const resetOptions = {};
+   variant.forEach((v) => {
+     resetOptions[v.key] = "";
+   });
+   setSelectedOptions(resetOptions);
+
+   const newParams = new URLSearchParams(searchParams);
+   variant.forEach((v) => {
+     newParams.delete(v.key);
+   });
+   setSearchParams(newParams);
+ }, [model]);
+
 
   return (
     <div className={styles["variant-box"]}>
@@ -51,18 +88,16 @@ const VariantPicker = ({ model = "" }) => {
                   {variantItem.options.map((optionValue, optionIndex) => {
                     return (
                       <Button
+                        onClick={() => {
+                          setVariant(optionValue, variantItem.key);
+                        }}
                         key={optionIndex}
                         size="sm"
-                        variant="secondary"
-                        onClick={() => {
-                          searchParams.set(
-                            variantItem.variantTitle
-                              .toLowerCase()
-                              .replace(/\s+/g, "-"),
-                            optionValue
-                          );
-                          setSearchParams(searchParams);
-                        }}
+                        variant={
+                          selectedOptions[variantItem.key] === optionValue
+                            ? "primary"
+                            : "secondary"
+                        }
                       >
                         {optionValue}
                       </Button>
