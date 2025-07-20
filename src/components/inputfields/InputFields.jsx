@@ -16,7 +16,8 @@ const InputFields = ({
   suffixIcon = null,
   type = "",
   name = "",
-  value=""
+  value = "",
+  onChange = () => {},
 }) => {
   const inputClasses = [
     styles["input-field"],
@@ -27,19 +28,20 @@ const InputFields = ({
 
   const iconWrapperClasses = [
     clsx(
-    styles["input-field"],
-    prefixIcon ? styles["prefixIcon-box"] : "",
-    suffixIcon ? styles["suffixIcon-box"] : "",
-    error ? styles["input-error"] : "",
-    success ? styles["input-success"] : "",
-    styles[`input-field-${variant}`],
-    disabled ? styles[`disabled-${variant}`] : "",
-    variant === "text" ? styles["text-field"] : "",
-    className,)
-  ]
-  
+      styles["input-field"],
+      prefixIcon ? styles["prefixIcon-box"] : "",
+      suffixIcon ? styles["suffixIcon-box"] : "",
+      error ? styles["input-error"] : "",
+      success ? styles["input-success"] : "",
+      styles[`input-field-${variant}`],
+      disabled ? styles[`disabled-${variant}`] : "",
+      variant === "text" ? styles["text-field"] : "",
+      className
+    ),
+  ];
+
   const id = useId();
-  const inputId = `${id}-${name}`
+  const inputId = `${id}-${name}`;
 
   return (
     <label className={styles["input-box"]}>
@@ -62,6 +64,7 @@ const InputFields = ({
               name={name}
               value={value}
               id={inputId}
+              onChange={onChange}
             />
             <span className={styles["radio"]}></span>
             {children}
@@ -77,6 +80,7 @@ const InputFields = ({
             type={type}
             name={name}
             value={value}
+            onChange={onChange}
           />
         )}
 

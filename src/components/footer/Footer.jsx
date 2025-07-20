@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '@/components/footer/footer.module.css'
 import Sms from '../../assets/icons/Sms';
 import InputFields from '../inputFields/InputFields';
@@ -9,6 +9,24 @@ import Facebook from "../../assets/icons/Facebook";
 import LinkdIn from "../../assets/icons/LinkdIn";
 import { NavLink } from 'react-router-dom';
 const Footer = () => {
+
+const [newsletter, setNewsletter] = useState({ email: "" });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewsletter((pre) => ({
+      ...pre,
+      [name]:value
+    }))
+  }
+
+  const handleSubmit = ((e) => {
+    e.preventDefault()
+    console.log(newsletter);
+      setNewsletter({ email: "" });
+
+  })
+
   return (
     <>
       <div className={styles["footer"]}>
@@ -19,17 +37,23 @@ const Footer = () => {
                 Start Selling With Us
               </h1>
               <div className={styles["footer-input"]}>
-                <InputFields
-                  placeholder="Enter Your Email"
-                  variant="underline"
-                  prefixIcon={<Sms />}
-                  suffixIcon={
-                    <IconButton
-                      icon={<ArrowRightIcon pathClass={styles.path} />}
-                      size="2xs"
-                    />
-                  }
-                />
+                <form onSubmit={handleSubmit}>
+                  <InputFields
+                    name="email"
+                    value={newsletter.email}
+                    onChange={handleChange}
+                    placeholder="Enter Your Email"
+                    variant="underline"
+                    prefixIcon={<Sms />}
+                    suffixIcon={
+                      <IconButton
+                        icon={<ArrowRightIcon pathClass={styles.path} />}
+                        size="2xs"
+                        type="submit"
+                      />
+                    }
+                  />
+                </form>
               </div>
             </div>
 
@@ -62,7 +86,9 @@ const Footer = () => {
                     styles["footer-body-text"],
                   ].join(" ")}
                 >
-                  <li>85 Bury Road Manchester, M8 8FX <br></br>United Kingdom</li>
+                  <li>
+                    85 Bury Road Manchester, M8 8FX <br></br>United Kingdom
+                  </li>
                 </ul>
                 <ul className={[styles["footer-body-social"]].join(" ")}>
                   <li>
