@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import image from "@/assets/images/iphone.png";
 import styles from "./variantPicker.module.css";
 import Button from "../button/Button";
-import { InfoCircle } from "iconsax-reactjs";
 import { useSearchParams } from "react-router-dom";
+import InfoCircle from "../../assets/icons/InfoCircle";
 
   const variant = [
     {
@@ -78,9 +78,7 @@ const VariantPicker = ({ model = "" }) => {
                   {variantItem.variantTitle}
                   {variantItem.variantTitle === "Condition" && (
                     <span className={styles["condition-box"]}>
-                      <span>
-                        <InfoCircle width={"16px"} />
-                      </span>
+                        <InfoCircle />
                       <span>Unopened, unused, in original packaging.</span>
                     </span>
                   )}
